@@ -17,6 +17,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -63,6 +64,16 @@ public class Commande implements Serializable {
     private Client client;
     
     
+    //lien vers table Commentaire
+    @OneToMany(mappedBy = "commandeCommentaire") 
+    private List<Commentaire> commentaires = new ArrayList<>();
+    
+    
+     //lien vers table Reclamation
+    @OneToMany(mappedBy = "commandeReclamation")
+    private List<Reclamation> reclamations = new ArrayList<>();
+    
+    //==========================================================================
     
     
     

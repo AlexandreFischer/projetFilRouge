@@ -11,11 +11,11 @@
     <class>projetFilRouge.entity.LigneDeCommande</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/projetFilRouge"/>
-      <property name="javax.persistence.jdbc.user" value="projetFilRouge"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/filrouge"/>
+      <property name="javax.persistence.jdbc.user" value="filrouge"/>
       <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
-      <property name="javax.persistence.jdbc.password" value="projetFilRouge"/>
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="javax.persistence.jdbc.password" value="filrouge"/>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     </properties>
   </persistence-unit>
 </persistence>

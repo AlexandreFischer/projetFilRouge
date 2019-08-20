@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -23,9 +24,20 @@ public class Commentaire implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+   
     
     @Column(nullable = false)
     private String commentaire;
+    
+    @ManyToOne 
+    //@JoinColumn(name = "CLEF_ETRANGERE_COMMANDE")  
+    private Commande commandeCommentaire;  //fk vers la table commande: 'Commentaire' est proprietaire de la fk commande
+    
+    //==========================================================================
+   
+    
+    
+    
 
     public Long getId() {
         return id;

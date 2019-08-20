@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -26,7 +27,17 @@ public class Reclamation implements Serializable {
     
     @Column(nullable = false)
     private String reclamation;
-
+    
+    
+    @ManyToOne 
+    //@JoinColumn(name = "CLEF_ETRANGERE_COMMANDE")  
+    private Commande commandeReclamation; //fk vers la table commande: 'Reclamation' est proprietaire de la fk commande
+    
+   //==========================================================================
+    
+    
+    
+    
     public Long getId() {
         return id;
     }
