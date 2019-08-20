@@ -63,6 +63,9 @@ public class Commande implements Serializable {
     @ManyToOne()
     private Client client;
     
+    //lien vers table Ligne de commande
+    @OneToMany(mappedBy = "commande") 
+    private List<LigneDeCommande> listeLignedecommande = new ArrayList<>();
     
     //lien vers table Commentaire
     @OneToMany(mappedBy = "commandeCommentaire") 
