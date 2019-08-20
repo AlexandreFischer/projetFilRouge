@@ -8,6 +8,8 @@ package projetFilRouge.entity;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,7 +19,13 @@ import javax.persistence.Id;
  * @author alexa
  */
 @Entity
-public class Client implements Serializable {
+public class Article implements Serializable {
+
+    public enum Categorie{
+        HOMME,
+        FEMME,
+        SAC
+    }
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -27,20 +35,29 @@ public class Client implements Serializable {
     @Column(nullable = false)
     private String nom;
     
-    @Column(nullable = false, unique = true)
-    private String mail;
-    
-    @Column(nullable = false, unique = true)
-    private String password;
+    @Column(length = 1500)
+    private String description;
     
     @Column(nullable = false)
-    private Integer pointFidelite;
+    private Double prixHT;
+    
+    @Column(nullable = false)
+    private Integer delaisAppros;
+    
+    @Column(nullable = false)
+    private Integer delaisDeLivraisonArt;
+    
+    @Column(nullable = false)
+    private Integer quantiteStock;
+        
+    @Enumerated(EnumType.STRING)
+    private Categorie categorie;
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long idClient) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -54,11 +71,11 @@ public class Client implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Client)) {
+        if (!(object instanceof Article)) {
             return false;
         }
-        Client other = (Client) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        Article other = (Article) object;
+        if ((this.id == null && other.id != null) || (this.id!= null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
@@ -66,7 +83,7 @@ public class Client implements Serializable {
 
     @Override
     public String toString() {
-        return "projetFilRouge.entity.Client[ id=" + id + " ]";
+        return "projetFilRouge.entity.Article[ id=" + id + " ]";
     }
     
 }

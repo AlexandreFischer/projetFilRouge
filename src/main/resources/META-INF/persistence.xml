@@ -3,6 +3,12 @@
   <persistence-unit name="projetFilRouge_PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>projetFilRouge.entity.Client</class>
+    <class>projetFilRouge.entity.Article</class>
+    <class>projetFilRouge.entity.Commentaire</class>
+    <class>projetFilRouge.entity.Reclamation</class>
+    <class>projetFilRouge.entity.Vendeur</class>
+    <class>projetFilRouge.entity.Commande</class>
+    <class>projetFilRouge.entity.LigneDeCommande</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/projetFilRouge"/>

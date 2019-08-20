@@ -6,41 +6,64 @@
 package projetFilRouge.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author alexa
  */
 @Entity
-public class Client implements Serializable {
+public class Commande implements Serializable {
+    
+    public enum MoyenDePaiement{
+        HOMME,
+        FEMME,
+        SAC
+    }
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
     @Column(nullable = false)
-    private String nom;
-    
-    @Column(nullable = false, unique = true)
-    private String mail;
-    
-    @Column(nullable = false, unique = true)
-    private String password;
+    private Double montantTotal;
     
     @Column(nullable = false)
-    private Integer pointFidelite;
+    private String cgv;
+    
+    @Column(nullable = false)
+    private Integer tva;
+    
+    @Temporal(TemporalType.DATE)
+    private Date date;
+    
+    @Temporal(TemporalType.DATE)
+    private Date dateLivraisonCommande;
+    
+    @Enumerated(EnumType.STRING)
+    private MoyenDePaiement moyenDePaiement;
+    
+    
+    
+    
+    
+    
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long idClient) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -54,10 +77,10 @@ public class Client implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Client)) {
+        if (!(object instanceof Commande)) {
             return false;
         }
-        Client other = (Client) object;
+        Commande other = (Commande) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -66,7 +89,7 @@ public class Client implements Serializable {
 
     @Override
     public String toString() {
-        return "projetFilRouge.entity.Client[ id=" + id + " ]";
+        return "projetFilRouge.entity.Commande[ id=" + id + " ]";
     }
     
 }

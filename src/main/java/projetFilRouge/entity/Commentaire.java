@@ -17,30 +17,21 @@ import javax.persistence.Id;
  * @author alexa
  */
 @Entity
-public class Client implements Serializable {
+public class Commentaire implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
     @Column(nullable = false)
-    private String nom;
-    
-    @Column(nullable = false, unique = true)
-    private String mail;
-    
-    @Column(nullable = false, unique = true)
-    private String password;
-    
-    @Column(nullable = false)
-    private Integer pointFidelite;
+    private String commentaire;
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long idClient) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -54,10 +45,10 @@ public class Client implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Client)) {
+        if (!(object instanceof Commentaire)) {
             return false;
         }
-        Client other = (Client) object;
+        Commentaire other = (Commentaire) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -66,7 +57,7 @@ public class Client implements Serializable {
 
     @Override
     public String toString() {
-        return "projetFilRouge.entity.Client[ id=" + id + " ]";
+        return "projetFilRouge.entity.Commentaire[ id=" + id + " ]";
     }
     
 }
