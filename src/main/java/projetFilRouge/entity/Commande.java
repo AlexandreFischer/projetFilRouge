@@ -25,9 +25,10 @@ import javax.persistence.TemporalType;
 public class Commande implements Serializable {
     
     public enum MoyenDePaiement{
-        HOMME,
-        FEMME,
-        SAC
+        CARTEBLEU,
+        PAYPAL,
+        CHEQUE,
+        VIREMENT
     }
 
     private static final long serialVersionUID = 1L;
