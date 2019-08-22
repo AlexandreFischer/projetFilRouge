@@ -35,7 +35,7 @@ public class ArticleDAOTest {
         Article a = new Article("TROTINETTE", 54.5, 5, 6,50);
         dao.save(a);
     }
-    
+    /*
     @Test
     public void modifierArticleOK(){
         
@@ -44,7 +44,7 @@ public class ArticleDAOTest {
     @Test
     public void supprimerArticleOK(){
         
-    }
+    }*/
    
     
 }

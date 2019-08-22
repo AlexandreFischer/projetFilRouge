@@ -58,6 +58,11 @@ public class Article implements Serializable {
 
     @OneToMany(mappedBy = "article")
     private List<LigneDeCommande> listeLigneDeCommandes = new ArrayList<>();
+    
+    //lien vers table Commentaire
+    @OneToMany(mappedBy = "articleC") 
+    private List<Commentaire> commentairesA = new ArrayList<>();
+    
 
     public Article(){
         
@@ -70,7 +75,7 @@ public class Article implements Serializable {
         this.quantiteStock = quantiteStock;
     }
     
-    
+
     
     
     public Long getId() {

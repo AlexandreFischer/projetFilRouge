@@ -31,7 +31,7 @@ public class Commentaire implements Serializable {
     
     @ManyToOne 
     //@JoinColumn(name = "CLEF_ETRANGERE_COMMANDE")  
-    private Commande commandeCommentaire;  //fk vers la table commande: 'Commentaire' est proprietaire de la fk commande
+    private Article articleC;  //fk vers la table commande: 'Commentaire' est proprietaire de la fk commande
     
     //==========================================================================
    

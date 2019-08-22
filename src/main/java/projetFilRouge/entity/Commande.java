@@ -74,11 +74,10 @@ public class Commande implements Serializable {
     @OneToMany(mappedBy = "commande", cascade = CascadeType.PERSIST)  
     private List<LigneDeCommande> listeLignedecommande = new ArrayList<>();
     
-    //lien vers table Commentaire
-    @OneToMany(mappedBy = "commandeCommentaire") 
-    private List<Commentaire> commentaires = new ArrayList<>();
-    
-    
+//    //lien vers table Commentaire
+//    @OneToMany(mappedBy = "commandeCommentaire") 
+//    private List<Commentaire> commentaires = new ArrayList<>();
+
      //lien vers table Reclamation
     @OneToMany(mappedBy = "commandeReclamation")
     private List<Reclamation> reclamations = new ArrayList<>();
@@ -179,13 +178,13 @@ public class Commande implements Serializable {
         this.listeLignedecommande = listeLignedecommande;
     }
 
-    public List<Commentaire> getCommentaires() {
-        return commentaires;
-    }
-
-    public void setCommentaires(List<Commentaire> commentaires) {
-        this.commentaires = commentaires;
-    }
+//    public List<Commentaire> getCommentaires() {
+//        return commentaires;
+//    }
+//
+//    public void setCommentaires(List<Commentaire> commentaires) {
+//        this.commentaires = commentaires;
+//    }
 
     public List<Reclamation> getReclamations() {
         return reclamations;
