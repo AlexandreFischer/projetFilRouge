@@ -7,7 +7,6 @@ package projetFilRouge.main;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
-import projetFilRouge.dao.CommandeDAO;
 import projetFilRouge.entity.Commande;
 
 /**

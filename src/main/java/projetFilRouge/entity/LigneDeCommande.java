@@ -8,6 +8,8 @@ package projetFilRouge.entity;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,6 +23,11 @@ import javax.persistence.OneToMany;
 @Entity
 public class LigneDeCommande implements Serializable {
 
+    public enum TypeLigneDeCommande{
+        RESERVE,
+        COMMANDE
+    }
+    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +35,25 @@ public class LigneDeCommande implements Serializable {
     
     @Column(nullable = false)
     private Integer quantiteArticle;
+    
+    @Enumerated(EnumType.STRING)
+    private TypeLigneDeCommande typeLigneDeCommande;
+   
+  
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Integer getQuantiteArticle() {
+        return quantiteArticle;
+    }
+
+
+    public Commande getCommande() {
+        return commande;
+    }
+    
+ 
 
     public Long getId() {
         return id;

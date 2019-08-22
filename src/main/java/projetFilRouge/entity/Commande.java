@@ -17,6 +17,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
@@ -28,6 +29,10 @@ import javax.persistence.TemporalType;
  */
 @Entity
 public class Commande implements Serializable {
+
+    public void setMoyenDePaiement(String paypal) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public enum MoyenDePaiement{
         CARTEBLEU,
@@ -59,7 +64,8 @@ public class Commande implements Serializable {
     @Enumerated(EnumType.STRING)
     private MoyenDePaiement moyenDePaiement;
     
-    private List<Article> listeArticleReserve = new ArrayList<>();
+    
+    //private List<Article> listeArticleReserve = new ArrayList<>();
     
     @ManyToOne()
     private Client client;
@@ -81,11 +87,22 @@ public class Commande implements Serializable {
     
     
     public Commande(){}
-    public Commande(Double montantTotal, Client client) {
+
+    //==========================================================================
+
+    public Commande(Double montantTotal, String cgv, Integer tva) {
         this.montantTotal = montantTotal;
+        this.cgv = cgv;
+        this.tva = tva;
+    }
+
+    public Commande(Double montantTotal, String cgv, Integer tva, Date date, Client client) {
+        this.montantTotal = montantTotal;
+        this.cgv = cgv;
+        this.tva = tva;
+        this.date = date;
         this.client = client;
     }
-    //==========================================================================
     
     
     
@@ -138,13 +155,13 @@ public class Commande implements Serializable {
         this.moyenDePaiement = moyenDePaiement;
     }
 
-    public List<Article> getListeArticleReserve() {
-        return listeArticleReserve;
-    }
-
-    public void setListeArticleReserve(List<Article> listeArticleReserve) {
-        this.listeArticleReserve = listeArticleReserve;
-    }
+//    public List<Article> getListeArticleReserve() {
+//        return listeArticleReserve;
+//    }
+//
+//    public void setListeArticleReserve(List<Article> listeArticleReserve) {
+//        this.listeArticleReserve = listeArticleReserve;
+//    }
 
     public Client getClient() {
         return client;

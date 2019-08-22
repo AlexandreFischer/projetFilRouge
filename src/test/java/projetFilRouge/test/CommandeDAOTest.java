@@ -5,6 +5,7 @@
  */
 package projetFilRouge.test;
 
+import java.util.Date;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -12,61 +13,76 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+import projetFilRouge.dao.ClientDAOCrud;
 import projetFilRouge.entity.Commande;
-import projetFilRouge.dao.CommandeDAO;
 import projetFilRouge.entity.Client;
+import projetFilRouge.spring.SpringConfig;
+import projetFilRouge.dao.CommandeDAOCrud;
+import static projetFilRouge.entity.Commande_.date;
+import static projetFilRouge.entity.Commande_.dateLivraisonCommande;
 
 /**
  *
  * @author JM
  */
+
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = SpringConfig.class)
+@Rollback(false)
+@Transactional
 public class CommandeDAOTest {
 
-    public CommandeDAOTest() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Autowired  
+    private CommandeDAOCrud dao;
+    
+    @Autowired  
+    private ClientDAOCrud daoC;
+    
     @Test
+    public void ajouterCommandeOK(){
+        
+        Commande c = new Commande(500.34, "not checked",2);
+        Client jm = new Client("JM", "jm@jm.fr", "jmjmjm", 6754);
+        daoC.save(jm);
+        c.setClient(jm);
+        dao.save(c);
+    }
+    
+    /*
+    @Test
+    @Transactional
     public void obtenirToutesLesCommandesOK() {
-        CommandeDAO dao = new CommandeDAO();
         List<Commande> commandes = dao.obtenirToutesLesCommandes();
         assertEquals(1, commandes.size());
     }
-
+   */
+    
+    
+    /*
     @Test
+    @Transactional
     public void rechercherCommandeParIdOK() {
         long id = 2;
-        CommandeDAO dao = new CommandeDAO();
+        //CommandeDAO dao = new CommandeDAO();
         Commande c = dao.rechercherCommandeParId(id);
         long id_c = c.getId();
         assertEquals(id_c, id);
-    }
+    }*/
 
     
-    
+    /*
     @Test
+    @Transactional
     public void modifierCommandeParIdOK() {
-        CommandeDAO dao = new CommandeDAO();
+        //CommandeDAO dao = new CommandeDAO();
         long idCommande= 2;
        
         Commande c = dao.rechercherCommandeParId(idCommande);
@@ -84,6 +100,11 @@ public class CommandeDAOTest {
             System.out.println("commande n'existe en BD");
         }
     }
+    */
+    
+    
+    //--------------------------------------------------------
+    
     
     
     
@@ -125,7 +146,7 @@ public class CommandeDAOTest {
        // }
         
     }
-*/
+   */
      
 
 }

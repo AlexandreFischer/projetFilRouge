@@ -46,17 +46,11 @@ public class Client implements Serializable {
     
     public Client(){}
 
-    public Client(Long id, String nom, String mail, String password) {
-        this.id = id;
+    public Client(String nom, String mail, String password, Integer pointFidelite) {
         this.nom = nom;
         this.mail = mail;
         this.password = password;
-    }
-    
-    public Client(String nom, String mail, String password) {
-        this.nom = nom;
-        this.mail = mail;
-        this.password = password;
+        this.pointFidelite = pointFidelite;
     }
     //==========================================================================
     

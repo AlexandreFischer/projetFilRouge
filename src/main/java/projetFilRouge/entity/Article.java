@@ -58,6 +58,19 @@ public class Article implements Serializable {
 
     @OneToMany(mappedBy = "article")
     private List<LigneDeCommande> listeLigneDeCommandes = new ArrayList<>();
+
+    public Article(){
+        
+    }
+    public Article(String nom, Double prixHT, Integer delaisAppros, Integer delaisDeLivraisonArt, Integer quantiteStock) {
+        this.nom = nom;
+        this.prixHT = prixHT;
+        this.delaisAppros = delaisAppros;
+        this.delaisDeLivraisonArt = delaisDeLivraisonArt;
+        this.quantiteStock = quantiteStock;
+    }
+    
+    
     
     
     public Long getId() {
@@ -67,6 +80,72 @@ public class Article implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Double getPrixHT() {
+        return prixHT;
+    }
+
+    public void setPrixHT(Double prixHT) {
+        this.prixHT = prixHT;
+    }
+
+    public Integer getDelaisAppros() {
+        return delaisAppros;
+    }
+
+    public void setDelaisAppros(Integer delaisAppros) {
+        this.delaisAppros = delaisAppros;
+    }
+
+    public Integer getDelaisDeLivraisonArt() {
+        return delaisDeLivraisonArt;
+    }
+
+    public void setDelaisDeLivraisonArt(Integer delaisDeLivraisonArt) {
+        this.delaisDeLivraisonArt = delaisDeLivraisonArt;
+    }
+
+    public Integer getQuantiteStock() {
+        return quantiteStock;
+    }
+
+    public void setQuantiteStock(Integer quantiteStock) {
+        this.quantiteStock = quantiteStock;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
+
+    public List<LigneDeCommande> getListeLigneDeCommandes() {
+        return listeLigneDeCommandes;
+    }
+
+    public void setListeLigneDeCommandes(List<LigneDeCommande> listeLigneDeCommandes) {
+        this.listeLigneDeCommandes = listeLigneDeCommandes;
+    }
+    
+    
 
     @Override
     public int hashCode() {

@@ -9,6 +9,7 @@
     <class>projetFilRouge.entity.Vendeur</class>
     <class>projetFilRouge.entity.Commande</class>
     <class>projetFilRouge.entity.LigneDeCommande</class>
+    <class>projetFilRouge.dao.ArticleDAO</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/filrouge"/>
