@@ -42,6 +42,72 @@ public class Client implements Serializable {
     @OneToMany(mappedBy = "client")
     private List<Commande> listeCommandes = new ArrayList<>();
 
+    
+    
+    public Client(){}
+
+    public Client(Long id, String nom, String mail, String password) {
+        this.id = id;
+        this.nom = nom;
+        this.mail = mail;
+        this.password = password;
+    }
+    
+    public Client(String nom, String mail, String password) {
+        this.nom = nom;
+        this.mail = mail;
+        this.password = password;
+    }
+    //==========================================================================
+    
+    
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Integer getPointFidelite() {
+        return pointFidelite;
+    }
+
+    public void setPointFidelite(Integer pointFidelite) {
+        this.pointFidelite = pointFidelite;
+    }
+
+    public List<Commande> getListeCommandes() {
+        return listeCommandes;
+    }
+
+    public void setListeCommandes(List<Commande> listeCommandes) {
+        this.listeCommandes = listeCommandes;
+    }
+    
+    
+    
+    
+    
+    
+
     public Long getId() {
         return id;
     }

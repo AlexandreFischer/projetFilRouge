@@ -5,7 +5,10 @@
  */
 package projetFilRouge.main;
 
+import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import projetFilRouge.dao.CommandeDAO;
+import projetFilRouge.entity.Commande;
 
 /**
  *
@@ -18,7 +21,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Persistence.createEntityManagerFactory("projetFilRouge_PU");
+        //Persistence.createEntityManagerFactory("projetFilRouge_PU");
+        
     }
     
 }

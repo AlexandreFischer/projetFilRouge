@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -64,7 +65,7 @@ public class Commande implements Serializable {
     private Client client;
     
     //lien vers table Ligne de commande
-    @OneToMany(mappedBy = "commande") 
+    @OneToMany(mappedBy = "commande", cascade = CascadeType.PERSIST)  
     private List<LigneDeCommande> listeLignedecommande = new ArrayList<>();
     
     //lien vers table Commentaire
@@ -77,6 +78,105 @@ public class Commande implements Serializable {
     private List<Reclamation> reclamations = new ArrayList<>();
     
     //==========================================================================
+    
+    
+    public Commande(){}
+    public Commande(Double montantTotal, Client client) {
+        this.montantTotal = montantTotal;
+        this.client = client;
+    }
+    //==========================================================================
+    
+    
+    
+
+    public Double getMontantTotal() {
+        return montantTotal;
+    }
+
+    public void setMontantTotal(Double montantTotal) {
+        this.montantTotal = montantTotal;
+    }
+
+    public String getCgv() {
+        return cgv;
+    }
+
+    public void setCgv(String cgv) {
+        this.cgv = cgv;
+    }
+
+    public Integer getTva() {
+        return tva;
+    }
+
+    public void setTva(Integer tva) {
+        this.tva = tva;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Date getDateLivraisonCommande() {
+        return dateLivraisonCommande;
+    }
+
+    public void setDateLivraisonCommande(Date dateLivraisonCommande) {
+        this.dateLivraisonCommande = dateLivraisonCommande;
+    }
+
+    public MoyenDePaiement getMoyenDePaiement() {
+        return moyenDePaiement;
+    }
+
+    public void setMoyenDePaiement(MoyenDePaiement moyenDePaiement) {
+        this.moyenDePaiement = moyenDePaiement;
+    }
+
+    public List<Article> getListeArticleReserve() {
+        return listeArticleReserve;
+    }
+
+    public void setListeArticleReserve(List<Article> listeArticleReserve) {
+        this.listeArticleReserve = listeArticleReserve;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public List<LigneDeCommande> getListeLignedecommande() {
+        return listeLignedecommande;
+    }
+
+    public void setListeLignedecommande(List<LigneDeCommande> listeLignedecommande) {
+        this.listeLignedecommande = listeLignedecommande;
+    }
+
+    public List<Commentaire> getCommentaires() {
+        return commentaires;
+    }
+
+    public void setCommentaires(List<Commentaire> commentaires) {
+        this.commentaires = commentaires;
+    }
+
+    public List<Reclamation> getReclamations() {
+        return reclamations;
+    }
+
+    public void setReclamations(List<Reclamation> reclamations) {
+        this.reclamations = reclamations;
+    }
     
     
     
@@ -112,7 +212,9 @@ public class Commande implements Serializable {
 
     @Override
     public String toString() {
-        return "projetFilRouge.entity.Commande[ id=" + id + " ]";
+        return "Commande{" + "id=" + id + ", montantTotal=" + montantTotal + ", cgv=" + cgv + ", tva=" + tva + ", date=" + date + ", dateLivraisonCommande=" + dateLivraisonCommande + ", moyenDePaiement=" + moyenDePaiement + ", client=" + client + '}';
     }
+
+
     
 }
