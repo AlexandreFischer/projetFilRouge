@@ -6,7 +6,11 @@
 package projetFilRouge.dao;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
+import projetFilRouge.entity.Article;
+import projetFilRouge.entity.Commande;
 import projetFilRouge.entity.Commentaire;
 
 /**
@@ -14,5 +18,10 @@ import projetFilRouge.entity.Commentaire;
  * @author JM
  */
 public interface CommentaireDAOCrud extends CrudRepository<Commentaire, Long>{
+    
+List<Commentaire> findByArticleC(String commentaire);
+   
+  
+   
     
 }

@@ -6,6 +6,7 @@
 package projetFilRouge.dao;
 
 import java.io.Serializable;
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import projetFilRouge.entity.Article;
 
@@ -14,5 +15,8 @@ import projetFilRouge.entity.Article;
  * @author JM
  */
 public interface ArticleDAOCrud extends CrudRepository<Article, Long>{
+    
+    List<Article> findByNom(String nom);
+    List<Article> findByCategorie(String categorie);
     
 }

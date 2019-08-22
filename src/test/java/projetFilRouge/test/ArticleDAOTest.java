@@ -27,13 +27,13 @@ import projetFilRouge.spring.SpringConfig;
 @Transactional
 public class ArticleDAOTest {
     
-    @Autowired  
-    private ArticleDAOCrud dao;
+//    @Autowired  
+//    private ArticleDAOCrud dao;
     
     @Test
     public void ajouterArticleOK(){
-        Article a = new Article("TROTINETTE", 54.5, 5, 6,50);
-        dao.save(a);
+//        Article a = new Article("TROTINETTE", 54.5, 5, 6,50);
+//        dao.save(a);
     }
     /*
     @Test

@@ -6,13 +6,19 @@
 package projetFilRouge.dao;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import projetFilRouge.entity.Commande;
+
 
 /**
  *
  * @author JM
  */
 public interface CommandeDAOCrud extends CrudRepository<Commande, Long>{
+    
+    List<Commande> findByDate(Date date);
+    List<Commande> findByClient(String client);
     
 }

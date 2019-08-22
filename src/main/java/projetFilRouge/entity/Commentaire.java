@@ -34,6 +34,9 @@ public class Commentaire implements Serializable {
     private Article articleC;  //fk vers la table commande: 'Commentaire' est proprietaire de la fk commande
     
     //==========================================================================
+
+    public Commentaire() {
+    }
    
     
     

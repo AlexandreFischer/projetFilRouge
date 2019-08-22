@@ -6,7 +6,9 @@
 package projetFilRouge.dao;
 
 import java.io.Serializable;
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
+import projetFilRouge.entity.Article;
 import projetFilRouge.entity.Client;
 
 /**
@@ -15,4 +17,6 @@ import projetFilRouge.entity.Client;
  */
 public interface ClientDAOCrud extends CrudRepository<Client, Long>{
     
+    List<Client> findByNom(String nom);
+    List<Client> findByMail(String mail);
 }
