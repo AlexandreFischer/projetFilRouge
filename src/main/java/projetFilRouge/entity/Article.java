@@ -60,7 +60,7 @@ public class Article implements Serializable {
     private List<LigneDeCommande> listeLigneDeCommandes = new ArrayList<>();
     
     //lien vers table Commentaire
-    @OneToMany(mappedBy = "articleC") 
+    @OneToMany(mappedBy = "articleco") 
     private List<Commentaire> commentairesA = new ArrayList<>();
     
 

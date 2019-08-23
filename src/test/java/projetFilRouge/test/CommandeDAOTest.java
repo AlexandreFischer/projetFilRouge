@@ -50,32 +50,31 @@ public class CommandeDAOTest {
     public void ajouterCommandeOK(){
         
         Commande c = new Commande(500.34, "not checked",2);
-        Client jm = new Client("JM", "jm@jm.fr", "jmjmjm", 6754);
+        Client jm = new Client("JMMM", "jmmm@jmmm.fr", "jmmmjmjm", 675554);
         daoC.save(jm);
         c.setClient(jm);
         dao.save(c);
     }
     
-    /*
+   
     @Test
-    @Transactional
     public void obtenirToutesLesCommandesOK() {
-        List<Commande> commandes = dao.obtenirToutesLesCommandes();
+        
+        List<Commande> commandes = (List<Commande>) dao.findAll();
         assertEquals(1, commandes.size());
     }
-   */
+   
     
     
-    /*
+    
     @Test
     @Transactional
     public void rechercherCommandeParIdOK() {
         long id = 2;
-        //CommandeDAO dao = new CommandeDAO();
-        Commande c = dao.rechercherCommandeParId(id);
+        Commande c = dao.findOne(id);
         long id_c = c.getId();
         assertEquals(id_c, id);
-    }*/
+    }
 
     
     /*

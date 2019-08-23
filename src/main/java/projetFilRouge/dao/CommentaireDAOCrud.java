@@ -17,11 +17,19 @@ import projetFilRouge.entity.Commentaire;
  *
  * @author JM
  */
-public interface CommentaireDAOCrud extends CrudRepository<Commentaire, Long>{
+public interface CommentaireDAOCrud extends CrudRepository<Commentaire, Long> {
+
+    List<Commentaire> findByArticleco(String commentaire);
+
     
-List<Commentaire> findByArticleC(String commentaire);
-   
-  
-   
-    
+    //--------------------------------------------------------------------------
+    //List<Commentaire> findByArticleCListeLigneDeCommandes(long id);
+    //Pour que la ligne d'instruction ci-dessus puisse fonctionner, 
+    //il faut que dans l'entité "Commentaire",  l'attribut  "ArticleC"  
+    //s'écrive sans une lettre en mayuscule à la fin ( "articlec"  sans le "C" à la fin)
+    //Voici la bonne instruction : 
+    //PENSER À CHANGER L'ATTRIBUT "ArticleC" par "articlec" dans l'entité "Commentaire" !!!!!!!!!!!!!
+    List<Commentaire> findByArticlecoListeLigneDeCommandes(long id);
+    //--------------------------------------------------------------------------
+
 }
