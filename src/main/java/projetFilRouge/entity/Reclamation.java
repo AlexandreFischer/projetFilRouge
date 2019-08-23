@@ -34,6 +34,13 @@ public class Reclamation implements Serializable {
     private Commande commandeReclamation; //fk vers la table commande: 'Reclamation' est proprietaire de la fk commande
     
    //==========================================================================
+
+    public Reclamation() {
+    }
+
+    public Reclamation(String reclamation) {
+        this.reclamation = reclamation;
+    }
     
     
     
@@ -46,6 +53,24 @@ public class Reclamation implements Serializable {
         this.id = id;
     }
 
+    public String getReclamation() {
+        return reclamation;
+    }
+
+    public void setReclamation(String reclamation) {
+        this.reclamation = reclamation;
+    }
+
+    public Commande getCommandeReclamation() {
+        return commandeReclamation;
+    }
+
+    public void setCommandeReclamation(Commande commandeReclamation) {
+        this.commandeReclamation = commandeReclamation;
+    }
+
+    
+    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -68,7 +93,11 @@ public class Reclamation implements Serializable {
 
     @Override
     public String toString() {
-        return "projetFilRouge.entity.Reclamation[ id=" + id + " ]";
+        return "Reclamation{" + "id=" + id + ", reclamation=" + reclamation + ", commandeReclamation=" + commandeReclamation + '}';
     }
+
+ 
+    
+    
     
 }
