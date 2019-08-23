@@ -38,6 +38,22 @@ public class LigneDeCommande implements Serializable {
     
     @Enumerated(EnumType.STRING)
     private TypeLigneDeCommande typeLigneDeCommande;
+
+    public TypeLigneDeCommande getTypeLigneDeCommande() {
+        return typeLigneDeCommande;
+    }
+
+    public void setTypeLigneDeCommande(TypeLigneDeCommande typeLigneDeCommande) {
+        this.typeLigneDeCommande = typeLigneDeCommande;
+    }
+
+    public Article getArticle() {
+        return article;
+    }
+
+    public void setArticle(Article article) {
+        this.article = article;
+    }
    
   
     public static long getSerialVersionUID() {
@@ -93,5 +109,15 @@ public class LigneDeCommande implements Serializable {
     public String toString() {
         return "projetFilRouge.entity.LigneDeCommande[ id=" + id + " ]";
     }
+
+    public void setQuantiteArticle(Long quantiteArticle) {
+        this.quantiteArticle = quantiteArticle;
+    }
+
+    public void setCommande(Commande commande) {
+        this.commande = commande;
+    }
+    
+    
     
 }

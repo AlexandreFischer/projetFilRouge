@@ -26,32 +26,48 @@ import projetFilRouge.entity.LigneDeCommande;
 @Service
 public class CommandeService {
     
-//    @Autowired
-//    private ClientDAOCrud daoClient;
+    @Autowired
+    private ClientDAOCrud daoClient;
 //    
-//    @Autowired
-//    private ArticleDAOCrud daoArticle;
+    @Autowired
+    private ArticleDAOCrud daoArticle;
 //    
 //    @Autowired
 //    private LigneDeCommandeDAOCrud daoLigneCommande;
 //    
-//    @Autowired
-//    private CommandeDAOCrud daoCommande;
+    @Autowired
+    private CommandeDAOCrud daoCommande;
 //    
 //    
 //
-//    public void ajouterPanier(Long idClient, Long idArticle, Long quantite){
-//        
-//        if(daoCommande.findByEtatDuPanier(Commande.etatPanier) equals(ENCOURS)){
-//            dao.save(truc);
-//        }
-//        
-//        else
-//            Commande c = new Commande()
-//
-//        
-//      
-//        
-//    }
+    public void ajouterPanier(long idClient, long idArticle, long quantite){
+        
+        // Recupere la commande EN COURS du client idClient si elle existe, sinon on en cree une nouvelle
+        Commande commande = this.daoCommande.findOneByClientIdAndEtatPanier(idClient, Commande.EtatPanier.ENCOURS);
+        if( commande==null ){
+            commande = new Commande();
+            
+            // Recup client et l associe a la commande
+            Client cli = daoClient.findOne(idClient);
+            
+            cli.getListeCommandes().add(commande);
+            commande.setClient(cli);
+        }
+        
+        
+        // Cree nouv ligne de commande que j associe a la commande
+        LigneDeCommande ligneCmd = new LigneDeCommande();
+        ligneCmd.setCommande(commande);
+        commande.getListeLignedecommande().add(ligneCmd);
+        
+        // Recup article a partir de son id et l assoc ligne com + quantite
+        Article art = daoArticle.findOne(idArticle);
+        art.getListeLigneDeCommandes().add(ligneCmd);
+        ligneCmd.setArticle(art);
+        ligneCmd.setQuantiteArticle(quantite);
+        
+        // Maj / ajoute de la commande et on est ok
+        daoCommande.save(commande);
+    }
     
 }

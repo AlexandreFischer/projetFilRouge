@@ -21,5 +21,8 @@ public interface ClientDAOCrud extends CrudRepository<Client, Long>{
     Client findByNom(String nom);
     Client findByMail(String mail);
     Client findByMailAndPassword(String mail, String password);
+
+ 
+
     
 }

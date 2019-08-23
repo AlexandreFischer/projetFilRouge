@@ -18,8 +18,12 @@ import projetFilRouge.entity.Commande;
  */
 public interface CommandeDAOCrud extends CrudRepository<Commande, Long>{
     
+    Commande findOneByClientId(long id);
     List<Commande> findByDate(Date date);
     List<Commande> findByClient(String client);
     Long countByEtatPanier(Commande.EtatPanier etatPanier);
+    
+
+    public Commande findOneByClientIdAndEtatPanier(long idClient, Commande.EtatPanier etatPanier);
     
 }

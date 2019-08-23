@@ -135,6 +135,6 @@ public class Client implements Serializable {
         return "Client{" + "id=" + id + ", mail=" + mail + ", password=" + password + '}';
     }
 
-
+    
     
 }
