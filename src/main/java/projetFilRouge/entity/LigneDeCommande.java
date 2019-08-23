@@ -34,7 +34,7 @@ public class LigneDeCommande implements Serializable {
     private Long id;
     
     @Column(nullable = false)
-    private Integer quantiteArticle;
+    private Long quantiteArticle;
     
     @Enumerated(EnumType.STRING)
     private TypeLigneDeCommande typeLigneDeCommande;
@@ -44,7 +44,7 @@ public class LigneDeCommande implements Serializable {
         return serialVersionUID;
     }
 
-    public Integer getQuantiteArticle() {
+    public Long getQuantiteArticle() {
         return quantiteArticle;
     }
 

@@ -30,6 +30,8 @@ import javax.persistence.TemporalType;
 @Entity
 public class Commande implements Serializable {
 
+   
+
     public void setMoyenDePaiement(String paypal) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -39,6 +41,10 @@ public class Commande implements Serializable {
         PAYPAL,
         CHEQUE,
         VIREMENT
+    }
+    public enum EtatPanier{
+        VALIDE,
+        ENCOURS
     }
 
     private static final long serialVersionUID = 1L;
@@ -64,6 +70,9 @@ public class Commande implements Serializable {
     @Enumerated(EnumType.STRING)
     private MoyenDePaiement moyenDePaiement;
     
+    
+    @Enumerated(EnumType.STRING)
+    private EtatPanier etatPanier;
     
     //private List<Article> listeArticleReserve = new ArrayList<>();
     
@@ -153,6 +162,16 @@ public class Commande implements Serializable {
     public void setMoyenDePaiement(MoyenDePaiement moyenDePaiement) {
         this.moyenDePaiement = moyenDePaiement;
     }
+
+    public EtatPanier getEtatDuPanier() {
+        return etatPanier;
+    }
+
+    public void setEtatDuPanier(EtatPanier etatDuPanier) {
+        this.etatPanier = etatDuPanier;
+    }
+    
+    
 
 //    public List<Article> getListeArticleReserve() {
 //        return listeArticleReserve;

@@ -33,7 +33,7 @@ public class Client implements Serializable {
     @Column(nullable = false, unique = true)
     private String mail;
     
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String password;
     
     @Column(nullable = false)
@@ -132,7 +132,9 @@ public class Client implements Serializable {
 
     @Override
     public String toString() {
-        return "projetFilRouge.entity.Client[ id=" + id + " ]";
+        return "Client{" + "id=" + id + ", mail=" + mail + ", password=" + password + '}';
     }
+
+
     
 }

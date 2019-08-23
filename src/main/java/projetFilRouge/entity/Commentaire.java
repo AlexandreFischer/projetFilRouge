@@ -38,11 +38,11 @@ public class Commentaire implements Serializable {
 
     public Commentaire() {
     }
-   
-    
-    
-    
 
+    public Commentaire(String commentaire) {
+        this.commentaire = commentaire;
+    }
+    
     public Long getId() {
         return id;
     }
@@ -50,6 +50,24 @@ public class Commentaire implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public String getCommentaire() {
+        return commentaire;
+    }
+
+    public void setCommentaire(String commentaire) {
+        this.commentaire = commentaire;
+    }
+
+    public Article getArticleco() {
+        return articleco;
+    }
+
+    public void setArticleco(Article articleco) {
+        this.articleco = articleco;
+    }
+    
+    
 
     @Override
     public int hashCode() {
@@ -73,7 +91,9 @@ public class Commentaire implements Serializable {
 
     @Override
     public String toString() {
-        return "projetFilRouge.entity.Commentaire[ id=" + id + " ]";
+        return "Commentaire{" + "id=" + id + ", commentaire=" + commentaire + '}';
     }
+
+
     
 }

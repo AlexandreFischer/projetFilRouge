@@ -20,5 +20,6 @@ public interface CommandeDAOCrud extends CrudRepository<Commande, Long>{
     
     List<Commande> findByDate(Date date);
     List<Commande> findByClient(String client);
+    Long countByEtatPanier(Commande.EtatPanier etatPanier);
     
 }
