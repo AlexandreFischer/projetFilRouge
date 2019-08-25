@@ -44,8 +44,15 @@ public class LigneDeCommande implements Serializable {
 
     @ManyToOne
     private Commande commande;
-    
 
+    public LigneDeCommande() {
+    }
+
+    public LigneDeCommande(Long quantiteArticle, TypeLigneDeCommande typeLigneDeCommande) {
+        this.quantiteArticle = quantiteArticle;
+        this.typeLigneDeCommande = typeLigneDeCommande;
+    }
+    
     public Long getId() {
         return id;
     }

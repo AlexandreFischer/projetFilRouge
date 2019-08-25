@@ -28,7 +28,7 @@ public class ArticleService {
     }
 
     public void modifierArticle(Article article) {
-        Article art = dao.findByNom(article.getNom());
+        Article art = dao.findOne(article.getId());
         dao.save(art);
     }
 
