@@ -8,6 +8,7 @@ package projetFilRouge.entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -35,7 +36,7 @@ public class Article implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String nom;
     
     @Column(length = 1500)
@@ -56,7 +57,7 @@ public class Article implements Serializable {
     @Enumerated(EnumType.STRING)
     private Categorie categorie;
 
-    @OneToMany(mappedBy = "article")
+    @OneToMany(mappedBy = "article",cascade = CascadeType.PERSIST)
     private List<LigneDeCommande> listeLigneDeCommandes = new ArrayList<>();
     
     //lien vers table Commentaire
@@ -73,6 +74,16 @@ public class Article implements Serializable {
         this.delaisAppros = delaisAppros;
         this.delaisDeLivraisonArt = delaisDeLivraisonArt;
         this.quantiteStock = quantiteStock;
+    }
+
+    public Article(String nom, String description, Double prixHT, Integer delaisAppros, Integer delaisDeLivraisonArt, Integer quantiteStock, Categorie categorie) {
+        this.nom = nom;
+        this.description = description;
+        this.prixHT = prixHT;
+        this.delaisAppros = delaisAppros;
+        this.delaisDeLivraisonArt = delaisDeLivraisonArt;
+        this.quantiteStock = quantiteStock;
+        this.categorie = categorie;
     }
     
 
@@ -174,7 +185,10 @@ public class Article implements Serializable {
 
     @Override
     public String toString() {
-        return "projetFilRouge.entity.Article[ id=" + id + " ]";
+        return "Article{" + "id=" + id + ", nom=" + nom + ", description=" + description + ", prixHT=" + prixHT + ", delaisAppros=" + delaisAppros + ", delaisDeLivraisonArt=" + delaisDeLivraisonArt + ", quantiteStock=" + quantiteStock + ", categorie=" + categorie + ", listeLigneDeCommandes=" + listeLigneDeCommandes + '}';
     }
-    
+
+
+
+
 }

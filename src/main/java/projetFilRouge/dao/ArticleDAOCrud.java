@@ -16,7 +16,7 @@ import projetFilRouge.entity.Article;
  */
 public interface ArticleDAOCrud extends CrudRepository<Article, Long>{
     
-    List<Article> findByNom(String nom);
-    List<Article> findByCategorie(String categorie);
+    Article findByNom(String nom);
+    List<Article> findByCategorie(Article.Categorie categorie);
     
 }

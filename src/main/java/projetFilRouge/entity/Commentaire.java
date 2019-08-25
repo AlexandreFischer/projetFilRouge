@@ -25,7 +25,6 @@ public class Commentaire implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
    
-    
     @Column(nullable = false)
     private String commentaire;
     
@@ -67,8 +66,6 @@ public class Commentaire implements Serializable {
         this.articleco = articleco;
     }
     
-    
-
     @Override
     public int hashCode() {
         int hash = 0;
@@ -91,8 +88,10 @@ public class Commentaire implements Serializable {
 
     @Override
     public String toString() {
-        return "Commentaire{" + "id=" + id + ", commentaire=" + commentaire + '}';
+        return "Commentaire{" + "id=" + id + ", commentaire=" + commentaire + ", articleco=" + articleco + '}';
     }
+
+
 
 
     

@@ -13,6 +13,8 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
+import projetFilRouge.dao.ArticleDAOCrud;
+import projetFilRouge.dao.CommentaireDAOCrud;
 import projetFilRouge.entity.Commentaire;
 import projetFilRouge.service.ClientService;
 import projetFilRouge.service.CommentaireService;
@@ -31,22 +33,30 @@ public class CommentaireServiceTest {
     @Autowired
     private CommentaireService commentaireS;
     
+    @Autowired
+    private CommentaireDAOCrud daoCommentaire;
+    
+    @Autowired
+    private ArticleDAOCrud daoArticle;
+    
 //    @Test
 //    public void creerCommentaireOK(){
-//        Commentaire commentaire = new Commentaire("Commentaire 3");
+//        Commentaire commentaire = new Commentaire("Commentaire 1");
 //        commentaireS.ajouterCommentaire(commentaire);
 //    }
     
 //    @Test
 //    public void supprimerCommentaireOK(){
-//        Commentaire commentaire = new Commentaire();
-//        commentaire.setCommentaire("Commentaire 2");
-//        commentaireS.supprimerCommentaire(commentaire);
+//        commentaireS.supprimerCommentaire(8);
 //   }
     
 //    @Test
 //    public void afficherListeCommentairesOK(){
 //        commentaireS.afficherListeCommentaires();
 //    }
-
+    
+//    @Test
+//    public void afficherCommentaireParArticleOK(){
+//        commentaireS.afficherCommentaireParArticle(daoArticle.findByNom("sac a dos"));
+//    }
 }

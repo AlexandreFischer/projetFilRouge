@@ -35,19 +35,17 @@ public class CommandeServiceTest {
     @Autowired
     private CommandeService commandeS;
     
-    @Autowired
-    private ClientDAOCrud daoClient;
-    
+   
     @Test
     public void ajouterCommandeOK(){
-        Client client = new Client();
-        client.setNom("TOTO");
-        client.setMail("lsufd@sdfs.com"); 
-        client.setPassword("toto");
-        client.setPointFidelite(500);
-        Commande cmd = new Commande(520.50, "ok cgv",10, new Date(), client);
-        Article art = new Article("trotinette", 120.59D, 3, 7, 30);
-        commandeS.ajouterPanier(2,art.getId(),3L);
+//        Client client = new Client();
+//        client.setNom("TOTO");
+//        client.setMail("lsufd@sdfs.com"); 
+//        client.setPassword("toto");
+//        client.setPointFidelite(500);
+//        Commande cmd = new Commande(520.50, "ok cgv",10, new Date(), client);
+//        Article art = new Article("trotinette", 120.59D, 3, 7, 30);
+          commandeS.ajouterPanier(1, 1, 2);
     }
     
 }

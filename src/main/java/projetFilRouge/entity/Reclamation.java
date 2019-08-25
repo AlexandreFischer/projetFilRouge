@@ -41,9 +41,11 @@ public class Reclamation implements Serializable {
     public Reclamation(String reclamation) {
         this.reclamation = reclamation;
     }
-    
-    
-    
+
+    public Reclamation(String reclamation, Commande commandeReclamation) {
+        this.reclamation = reclamation;
+        this.commandeReclamation = commandeReclamation;
+    }
     
     public Long getId() {
         return id;
@@ -69,8 +71,6 @@ public class Reclamation implements Serializable {
         this.commandeReclamation = commandeReclamation;
     }
 
-    
-    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -96,8 +96,4 @@ public class Reclamation implements Serializable {
         return "Reclamation{" + "id=" + id + ", reclamation=" + reclamation + ", commandeReclamation=" + commandeReclamation + '}';
     }
 
- 
-    
-    
-    
 }

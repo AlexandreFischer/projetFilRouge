@@ -13,6 +13,7 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
+import projetFilRouge.dao.CommandeDAOCrud;
 import projetFilRouge.entity.Reclamation;
 import projetFilRouge.service.ClientService;
 import projetFilRouge.service.ReclamationService;
@@ -27,26 +28,28 @@ import projetFilRouge.spring.SpringConfig;
 @Rollback(false)
 @Transactional
 public class ReclamationServiceTest {
-    
+
     @Autowired
     private ReclamationService reclamationS;
     
-@Test
-    public void creerReclamationOK(){
-        Reclamation reclamation = new Reclamation("Reclamation 1");
-        reclamationS.ajouterReclamation(reclamation);
-    }
+    @Autowired
+    private CommandeDAOCrud daoCommande;
     
-    @Test
-    public void supprimerReclamationOK(){
-        Reclamation reclamation = new Reclamation();
-        reclamation.setReclamation("reclam 3");
-        reclamationS.supprimerReclamation(reclamation);
-   }
     
-    @Test
-    public void afficherListeReclamationsOK(){
-        reclamationS.afficherListeReclamations();
-    }
+//    @Test
+//    public void creerReclamationOK() {
+//        Reclamation reclamation = new Reclamation("Reclamation 1", daoCommande.findOne(5L));
+//        reclamationS.ajouterReclamation(reclamation);
+//    }
+
+//    @Test
+//    public void supprimerReclamationOK() {
+//        reclamationS.supprimerReclamation(2L);
+//    }
+
+//    @Test
+//    public void afficherListeReclamationsOK() {
+//        reclamationS.afficherListeReclamations();
+//    }
 
 }

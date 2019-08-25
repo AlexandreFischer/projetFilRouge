@@ -30,19 +30,18 @@ import javax.persistence.TemporalType;
 @Entity
 public class Commande implements Serializable {
 
-   
-
     public void setMoyenDePaiement(String paypal) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public enum MoyenDePaiement{
+
+    public enum MoyenDePaiement {
         CARTEBLEU,
         PAYPAL,
         CHEQUE,
         VIREMENT
     }
-    public enum EtatPanier{
+
+    public enum EtatPanier {
         VALIDE,
         ENCOURS
     }
@@ -51,53 +50,49 @@ public class Commande implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column(nullable = false)
     private Double montantTotal;
-    
+
     @Column(nullable = false)
     private String cgv;
-    
+
     @Column(nullable = false)
     private Integer tva;
-    
+
     @Temporal(TemporalType.DATE)
     private Date date;
-    
+
     @Temporal(TemporalType.DATE)
     private Date dateLivraisonCommande;
-    
+
     @Enumerated(EnumType.STRING)
     private MoyenDePaiement moyenDePaiement;
-    
-    
+
     @Enumerated(EnumType.STRING)
     private EtatPanier etatPanier;
-    
+
     //private List<Article> listeArticleReserve = new ArrayList<>();
-    
     @ManyToOne()
     private Client client;
-    
+
     //lien vers table Ligne de commande
-    @OneToMany(mappedBy = "commande", cascade = CascadeType.PERSIST)  
+    @OneToMany(mappedBy = "commande", cascade = CascadeType.PERSIST)
     private List<LigneDeCommande> listeLignedecommande = new ArrayList<>();
-    
+
 //    //lien vers table Commentaire
 //    @OneToMany(mappedBy = "commandeCommentaire") 
 //    private List<Commentaire> commentaires = new ArrayList<>();
-
-     //lien vers table Reclamation
+    
+    //lien vers table Reclamation
     @OneToMany(mappedBy = "commandeReclamation")
     private List<Reclamation> reclamations = new ArrayList<>();
-    
-    //==========================================================================
-    
-    
-    public Commande(){}
 
     //==========================================================================
+    public Commande() {
+    }
 
+    //==========================================================================
     public Commande(Double montantTotal, String cgv, Integer tva) {
         this.montantTotal = montantTotal;
         this.cgv = cgv;
@@ -111,8 +106,17 @@ public class Commande implements Serializable {
         this.date = date;
         this.client = client;
     }
-    
-    
+
+    public Commande(Double montantTotal, String cgv, Integer tva, Date date, Date dateLivraisonCommande, MoyenDePaiement moyenDePaiement, EtatPanier etatPanier, Client client) {
+        this.montantTotal = montantTotal;
+        this.cgv = cgv;
+        this.tva = tva;
+        this.date = date;
+        this.dateLivraisonCommande = dateLivraisonCommande;
+        this.moyenDePaiement = moyenDePaiement;
+        this.etatPanier = etatPanier;
+        this.client = client;
+    }
     
 
     public Double getMontantTotal() {
@@ -170,8 +174,6 @@ public class Commande implements Serializable {
     public void setEtatDuPanier(EtatPanier etatDuPanier) {
         this.etatPanier = etatDuPanier;
     }
-    
-    
 
 //    public List<Article> getListeArticleReserve() {
 //        return listeArticleReserve;
@@ -180,7 +182,6 @@ public class Commande implements Serializable {
 //    public void setListeArticleReserve(List<Article> listeArticleReserve) {
 //        this.listeArticleReserve = listeArticleReserve;
 //    }
-
     public Client getClient() {
         return client;
     }
@@ -204,7 +205,6 @@ public class Commande implements Serializable {
 //    public void setCommentaires(List<Commentaire> commentaires) {
 //        this.commentaires = commentaires;
 //    }
-
     public List<Reclamation> getReclamations() {
         return reclamations;
     }
@@ -212,10 +212,6 @@ public class Commande implements Serializable {
     public void setReclamations(List<Reclamation> reclamations) {
         this.reclamations = reclamations;
     }
-    
-    
-    
-    
 
     public Long getId() {
         return id;
@@ -247,9 +243,8 @@ public class Commande implements Serializable {
 
     @Override
     public String toString() {
-        return "Commande{" + "id=" + id + ", montantTotal=" + montantTotal + ", cgv=" + cgv + ", tva=" + tva + ", date=" + date + ", dateLivraisonCommande=" + dateLivraisonCommande + ", moyenDePaiement=" + moyenDePaiement + ", client=" + client + '}';
+        return "Commande{" + "id=" + id + ", montantTotal=" + montantTotal + ", cgv=" + cgv + ", tva=" + tva + ", date=" + date + ", dateLivraisonCommande=" + dateLivraisonCommande + ", moyenDePaiement=" + moyenDePaiement + ", etatPanier=" + etatPanier + ", client=" + client + ", listeLignedecommande=" + listeLignedecommande + ", reclamations=" + reclamations + '}';
     }
 
 
-    
 }

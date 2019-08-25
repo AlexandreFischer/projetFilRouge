@@ -17,6 +17,6 @@ import projetFilRouge.entity.Reclamation;
  */
 public interface ReclamationDAOCrud extends CrudRepository<Reclamation, Long>{
     
-    Reclamation findByReclamation(String reclamation);
+    //Reclamation findByReclamation(String reclamation);
     
 }

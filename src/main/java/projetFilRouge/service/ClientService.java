@@ -21,32 +21,39 @@ import projetFilRouge.entity.Commentaire;
 @Transactional
 @Service
 public class ClientService {
-    
+
     @Autowired
     private ClientDAOCrud dao;
-    
-    
-    public void ajouterClient(Client client){
-        if(dao.findAll().equals(client.getMail())){
-            System.out.println("Mail déjà existant,Veuillez en choisir un autre");
-        }
-        else {
-             dao.save(client);
-             System.out.println("CLIENT AJOUTE");
-        }
+
+    public void ajouterClient(Client client) {
+        dao.save(client);
     }
-    
-    public void seConnecterAuSite(Client client){
+
+    public void seConnecterAuSite(Client client) {
         System.out.println(dao.findByMailAndPassword(client.getMail(), client.getPassword()));
     }
-    
-    public void supprimerClient(Client client){
-        dao.delete(dao.findByNom(client.getNom()));
-        System.out.println("CLIENT SUPPRIMER");
+
+    public void supprimerClient(String nomClient) {
+        dao.delete(dao.findByNom(nomClient));
     }
-    
-    public List<Client> afficherListeClients(){
+
+    public List<Client> afficherListeClients() {
         System.out.println((List<Client>) dao.findAll());
         return (List<Client>) dao.findAll();
-    }    
+    }
+
+    public Client afficherClientParNom(String nomClient) {
+        System.out.println(dao.findByNom(nomClient));
+        return dao.findByNom(nomClient);
+    }
+
+    public Client afficherClientParMail(String mailClient) {
+        System.out.println(dao.findByMail(mailClient));
+        return dao.findByMail(mailClient);
+    }
+    
+    public Client afficherClientParMailAndPassword(String mailClient, String passwordClient){
+        System.out.println(dao.findByMailAndPassword(mailClient, passwordClient));
+        return dao.findByMailAndPassword(mailClient, passwordClient);
+    }
 }

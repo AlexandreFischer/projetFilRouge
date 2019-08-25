@@ -24,17 +24,15 @@ public class ReclamationService {
     @Autowired
     private ReclamationDAOCrud dao;
     
-    public void ajouterReclamation(Reclamation reclamation){
+    public void ajouterReclamation(Reclamation reclamation){ // OK
         dao.save(reclamation);
-        System.out.println("COMMENTAIRE AJOUTE");
     }
     
-    public void supprimerReclamation(Reclamation reclamation){
-        dao.delete(dao.findByReclamation(reclamation.getReclamation()));
-        System.out.println("RECLAMATION SUPPRIME");
+    public void supprimerReclamation(Long idReclamation){
+        dao.delete(dao.findOne(idReclamation));
     }
     
-    public List<Reclamation> afficherListeReclamations(){
+    public List<Reclamation> afficherListeReclamations(){ // OK
         System.out.println((List<Reclamation>) dao.findAll());
         return (List<Reclamation>) dao.findAll();
     }

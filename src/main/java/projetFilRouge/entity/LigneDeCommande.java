@@ -23,21 +23,36 @@ import javax.persistence.OneToMany;
 @Entity
 public class LigneDeCommande implements Serializable {
 
-    public enum TypeLigneDeCommande{
+    public enum TypeLigneDeCommande {
         RESERVE,
         COMMANDE
     }
-    
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column(nullable = false)
     private Long quantiteArticle;
-    
+
     @Enumerated(EnumType.STRING)
     private TypeLigneDeCommande typeLigneDeCommande;
+
+    @ManyToOne
+    private Article article;
+
+    @ManyToOne
+    private Commande commande;
+    
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public TypeLigneDeCommande getTypeLigneDeCommande() {
         return typeLigneDeCommande;
@@ -54,8 +69,7 @@ public class LigneDeCommande implements Serializable {
     public void setArticle(Article article) {
         this.article = article;
     }
-   
-  
+
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
@@ -64,25 +78,16 @@ public class LigneDeCommande implements Serializable {
         return quantiteArticle;
     }
 
-
     public Commande getCommande() {
         return commande;
     }
-    
- 
 
-    public Long getId() {
-        return id;
+    public void setQuantiteArticle(Long quantiteArticle) {
+        this.quantiteArticle = quantiteArticle;
     }
 
-    @ManyToOne 
-    private Article article;
-    
-    @ManyToOne 
-    private Commande commande;
-    
-    public void setId(Long id) {
-        this.id = id;
+    public void setCommande(Commande commande) {
+        this.commande = commande;
     }
 
     @Override
@@ -107,17 +112,9 @@ public class LigneDeCommande implements Serializable {
 
     @Override
     public String toString() {
-        return "projetFilRouge.entity.LigneDeCommande[ id=" + id + " ]";
+        return "LigneDeCommande{" + "id=" + id + ", quantiteArticle=" + quantiteArticle + ", typeLigneDeCommande=" + typeLigneDeCommande + ", article=" + article + ", commande=" + commande + '}';
     }
 
-    public void setQuantiteArticle(Long quantiteArticle) {
-        this.quantiteArticle = quantiteArticle;
-    }
 
-    public void setCommande(Commande commande) {
-        this.commande = commande;
-    }
-    
-    
-    
+
 }

@@ -29,23 +29,21 @@ public class ClientServiceTest {
 
     @Autowired
     private ClientService clientS;
-    
+
 //    @Test
 //    public void creerClientOK(){
-//        
 //        Client client = new Client("TUTU", "tusdsdstu@tuttuu.com", "tutqsdqdututtytu", 456);
 //        clientS.ajouterClient(client);
-//   
 //    }
-//    
+    
 //    @Test
 //    public void seConnecterAuSiteOK(){
 //        Client client = new Client();
-//        client.setMail("oqjoiqsjdqskdq@lqs,sdq");
-//        client.setPassword("kokokokok");
+//        client.setMail("alexandre@gmail.com");
+//        client.setPassword("fischer");
 //        clientS.seConnecterAuSite(client);
 //    }
-//    
+    
 //    @Test
 //    public void seConnecterAuSiteKO(){
 //        Client client = new Client();
@@ -65,4 +63,25 @@ public class ClientServiceTest {
 //    public void afficherListeClientOK(){
 //        clientS.afficherListeClients();
 //    }
+    
+//    @Test
+//    public void afficherClientParNomOK() {
+//        clientS.afficherClientParNom("VALERY");
+//    }
+
+//    @Test
+//    public void afficherClientParMailOK() {
+//        clientS.afficherClientParMail("alexandre@gmail.com");
+//    }
+
+//    @Test
+//    public void afficherClientParMailAndPasswordOK() {
+//        clientS.afficherClientParMailAndPassword("alexandre@gmail.com", "fischer");
+//    }
+    
+//    @Test
+//    public void supprimerClientOK(){
+//        clientS.supprimerClient("TUTU");
+//    }
+
 }

@@ -8,6 +8,7 @@ package projetFilRouge.entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -39,11 +40,10 @@ public class Client implements Serializable {
     @Column(nullable = false)
     private Integer pointFidelite;
     
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client", cascade = CascadeType.PERSIST)
     private List<Commande> listeCommandes = new ArrayList<>();
 
-    
-    
+
     public Client(){}
 
     public Client(String nom, String mail, String password, Integer pointFidelite) {
@@ -52,9 +52,6 @@ public class Client implements Serializable {
         this.password = password;
         this.pointFidelite = pointFidelite;
     }
-    //==========================================================================
-    
-    
 
     public String getNom() {
         return nom;
@@ -96,12 +93,6 @@ public class Client implements Serializable {
         this.listeCommandes = listeCommandes;
     }
     
-    
-    
-    
-    
-    
-
     public Long getId() {
         return id;
     }
@@ -132,7 +123,7 @@ public class Client implements Serializable {
 
     @Override
     public String toString() {
-        return "Client{" + "id=" + id + ", mail=" + mail + ", password=" + password + '}';
+        return "Client{" + "id=" + id + ", nom=" + nom + ", mail=" + mail + ", password=" + password + ", pointFidelite=" + pointFidelite + ", listeCommandes=" + listeCommandes + '}';
     }
 
     
