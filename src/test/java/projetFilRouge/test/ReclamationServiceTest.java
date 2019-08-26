@@ -23,10 +23,10 @@ import projetFilRouge.spring.SpringConfig;
  *
  * @author alexa
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = SpringConfig.class)
-@Rollback(false)
-@Transactional
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = SpringConfig.class)
+//@Rollback(false)
+//@Transactional
 public class ReclamationServiceTest {
 
     @Autowired

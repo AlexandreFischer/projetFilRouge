@@ -25,10 +25,10 @@ import projetFilRouge.spring.SpringConfig;
  *
  * @author alexa
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = SpringConfig.class)
-@Rollback(false)
-@Transactional
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = SpringConfig.class)
+//@Rollback(false)
+//@Transactional
 public class CommentaireServiceTest {
     
     @Autowired
@@ -40,37 +40,37 @@ public class CommentaireServiceTest {
     @Autowired
     private ArticleDAOCrud daoArticle;
     
-    @Test
-    public void creerCommentaireOK(){
-        Commentaire commentaire = new Commentaire("Commentaire 1");
-        Article unArticle = daoArticle.findByNom("Chaussons");
-        commentaireS.ajouterCommentaire(commentaire, unArticle);
-    }
-    
-    
-    @Test
-    public void supprimerCommentaireOK(){
-        commentaireS.supprimerCommentaire(2);
-    }
-    
-    @Test
-    public void supprimerCommentaireKO(){
-        commentaireS.supprimerCommentaire(1000);
-    }
-    
-    @Test
-    public void afficherListeCommentairesOK(){
-       commentaireS.afficherListeCommentaires();
-  }
-    
-    
-    @Test
-    public void afficherCommentaireParArticleOK(){
-        commentaireS.afficherCommentaireParArticle(daoArticle.findByNom("SAC"));
-    }
-    
-    @Test
-    public void afficherCommentaireParArticleKO(){
-        commentaireS.afficherCommentaireParArticle(daoArticle.findByNom("Chaussons"));
-    }
+//    @Test
+//    public void creerCommentaireOK(){
+//        Commentaire commentaire = new Commentaire("Commentaire 1");
+//        Article unArticle = daoArticle.findByNom("Chaussons");
+//        commentaireS.ajouterCommentaire(commentaire, unArticle);
+//    }
+//    
+//    
+//    @Test
+//    public void supprimerCommentaireOK(){
+//        commentaireS.supprimerCommentaire(2);
+//    }
+//    
+//    @Test
+//    public void supprimerCommentaireKO(){
+//        commentaireS.supprimerCommentaire(1000);
+//    }
+//    
+//    @Test
+//    public void afficherListeCommentairesOK(){
+//       commentaireS.afficherListeCommentaires();
+//  }
+//    
+//    
+//    @Test
+//    public void afficherCommentaireParArticleOK(){
+//        commentaireS.afficherCommentaireParArticle(daoArticle.findByNom("SAC"));
+//    }
+//    
+//    @Test
+//    public void afficherCommentaireParArticleKO(){
+//        commentaireS.afficherCommentaireParArticle(daoArticle.findByNom("Chaussons"));
+//    }
 }

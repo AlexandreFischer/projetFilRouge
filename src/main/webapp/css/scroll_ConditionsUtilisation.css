@@ -1,0 +1,13 @@
+#modal-dialog_conditionsGenerales,     
+#modal-content_conditionsGenerales {    
+    /* 80% of window height */
+    height: 90%;
+    background-color: lightgray;
+    color: black;
+}
+
+#modal-body_conditionsGenerales {             
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
+    overflow-y: scroll;
+}

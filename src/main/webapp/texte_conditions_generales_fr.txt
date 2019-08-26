@@ -1,0 +1,42 @@
+﻿introdroite = 'Site de vente en ligne'
+
+textedroite = '(dénomination sociale). <br> Société iForm (statut) au capital de 20 000 €. <br>                                              Siège social: iForm ESTIA II 64210 BIDART <br> N° de téléphone 123456789 <br> adresse e-mail: contact@javazon.com <br> RCS (ou Répertoire des métiers) de xxx (lieu) n°xxx  <br> N°individuel d identification fiscal: ......'
+
+
+article1_titre   = 'Article 1 - Objet'
+article1_contenu = 'Les présentes conditions régissent les ventes par la société.......... (dénomination sociale et adresse) de ......... (catégories ou nature des produits commercialisés par le site Internet).' 
+
+
+article2_titre   = 'Article 2 - Prix'
+article2_contenu = 'Les prix de nos produits sont indiqués en euros toutes taxes comprises (TVA et autres taxes applicables au jour de la commande), sauf indication contraire et hors frais de traitement et d \' expédition. '
+
+
+
+article3_titre   = 'Article 3 - Commandes'
+article3_contenu = 'Vous pouvez passer commande : <br> Détailler les modalités choisies, par exemple :  <br> Sur Internet : ......... (adresse du site) <br>Par téléphone au ......... (au tarif de ......... € TTC / min) du ......... (jours d\' ouverture au public) de ......... (horaires). <br> Les informations contractuelles sont présentées en langue française et feront l\'objet d\'une confirmation au plus tard au moment de la validation de votre commande. <br> La société .....(dénomination sociale) se réserve le droit de ne pas enregistrer un paiement, et de ne pas confirmer une commande pour quelque raison que ce soit, et plus particulièrement en cas de problème d\'approvisionnement, ou en cas de difficulté concernant la commande reçue. '
+
+
+article4_titre   = 'Article 4 - Validation de votre commande'
+article4_contenu = 'Toute commande figurant sur le site Internet ......... suppose l\'adhésion aux présentes Conditions Générales. Toute confirmation de commande entraîne votre adhésion pleine et entière aux présentes conditions générales de vente, sans exception ni réserve. <br> L\'ensemble des données fournies et la confirmation enregistrée vaudront preuve de la transaction. <br> Vous déclarez en avoir parfaite connaissance. <br> La confirmation de commande vaudra signature et acceptation des opérations effectuées. <br> Un récapitulatif des informations de votre commande et des présentes Conditions Générales, vous sera communiqué en format PDF via l\'adresse e-mail de confirmation de votre commande. '
+
+
+article5_titre   = 'Article 5 - Paiement'
+article5_contenu = 'Le fait de valider votre commande implique pour vous l\'obligation de payer le prix indiqué.Le règlement de vos achats s\' effectue par carte bancaire grâce au système sécurisé.......... <br> Le débit de la carte n\'est effectué qu\'au moment de l\'expédition de la commande. En cas de livraisons fractionnées, seuls les produits expédiés sont débités. '
+
+
+
+article7_titre   = 'Article 7 - Disponibilité'
+article7_contenu = 'Nos produits sont proposés tant qu\'ils sont visibles sur le site ......... et dans la limite des stocks disponibles. Pour les produits non stockés, nos offres sont valables sous réserve de disponibilité chez nos fournisseurs. <br> En cas d\'indisponibilité de produit après passation de votre commande, nous vous en informerons par mail. Votre commande sera automatiquement annulée et aucun débit bancaire ne sera effectué. <br> En outre, le site Internet ......... n\'a pas vocation à vendre ses produits en quantités importantes. Par conséquent la société ......... (dénomination sociale) se réserve le droit de refuser les commandes de ......... (nombre) articles identiques. '
+
+article12_titre   = 'Article 12 -  Propriété intellectuelle'
+article12_contenu = 'Tous les éléments du site ........ sont et restent la propriété intellectuelle et exclusive de la société .........(dénomination sociale). Nul n\' est autorisé à reproduire, exploiter, rediffuser, ou utiliser à quelque titre que ce soit, même partiellement, des éléments du site qu\' ils soient logiciels, visuels ou sonores. Tout lien simple ou par hypertexte est strictement interdit sans un accord écrit exprès de la société .........(dénomination sociale). '
+
+
+article13_titre   = 'Article 13 -  Données personnelles'
+article13_contenu = 'La société .........(dénomination sociale) se réserve le droit de collecter les informations nominatives et les données personnelles vous concernant. Elles sont nécessaires à la gestion de votre commande, ainsi qu\'à l\'amélioration des services et des informations que nous vous adressons. <br> Elles peuvent aussi être transmises aux sociétés qui contribuent à ces relations, telles que celles chargées de l\'exécution des services et commandes pour leur gestion, exécution, traitement et paiement. <br> Ces informations et données sont également conservées à des fins de sécurité, afin de respecter les obligations légales et réglementaires. <br> Conformément à la loi du 6 janvier 1978, vous disposez d\'un droit d\'accès, de rectification et d\'opposition aux informations nominatives et aux données personnelles vous concernant, directement sur le site Internet. '
+
+
+
+article14_titre   = 'Article 14 -  Archivage Preuve'
+article14_contenu = 'La société .........(dénomination sociale) archivera les bons de commandes et les factures sur un support fiable et durable constituant une copie fidèle conformément aux dispositions de l\'article 1348 du Code civil. '
+

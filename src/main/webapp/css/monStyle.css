@@ -1,0 +1,56 @@
+#div1{
+	position: absolute;
+  left: 1%;
+  top: 5%;
+  width:  700px;
+  height: 500px;
+  padding:5px;
+ border: 4px solid black;
+  background-color: white;
+  font-weight: bolder;
+}
+
+#div2 {
+	position: relative;
+	left: 5%;
+  width:  90%; 
+}
+
+#p1 {
+	position: relative;
+	left: 2%;
+  width:  96%;  
+  font-weight: bolder;
+}
+ 
+#div_check, #button1{
+  position: relative;
+  display: inline-block;
+  bottom: 10px;
+  left:40%;
+}
+
+.input_long{
+  width: 260px;
+}
+
+#label_check{
+  width: 340px;
+}
+
+.couleurElementFooter{
+  color: white;
+}
+
+.couleurElementCart{
+  color:black;
+}
+
+.alignerStock {
+  padding-left: 21%;
+}
+
+.alignerCommentaire{
+  margin-left: 237px;
+  font-size: 85%;
+}
