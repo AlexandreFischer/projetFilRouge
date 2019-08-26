@@ -14,7 +14,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 import projetFilRouge.dao.CommandeDAOCrud;
+import projetFilRouge.entity.Article;
 import projetFilRouge.entity.Reclamation;
+import projetFilRouge.entity.Commande;
 import projetFilRouge.service.ClientService;
 import projetFilRouge.service.ReclamationService;
 import projetFilRouge.spring.SpringConfig;
@@ -34,22 +36,40 @@ public class ReclamationServiceTest {
     
     @Autowired
     private CommandeDAOCrud daoCommande;
+      
+    @Test
+    public void creerReclamationOK() {
+        Reclamation r = new Reclamation("Reclamation 1");
+        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
+        reclamationS.ajouterReclamation(r, c);
+    }
+    @Test
+    public void creerReclamation2OK() {
+        Reclamation r = new Reclamation("Reclamation 2");
+        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
+        reclamationS.ajouterReclamation(r, c);
+    }
     
+    @Test
+    public void creerReclamationKO() {
+        Reclamation r = new Reclamation("Reclamation 1");
+        Commande c = daoCommande.findOne(1000L);   //cette commande ne doit pas exister en BD
+        reclamationS.ajouterReclamation(r, c);
+    }
+
+    @Test
+    public void supprimerReclamationOK() {
+       reclamationS.supprimerReclamation(2L);
+    }
     
-//    @Test
-//    public void creerReclamationOK() {
-//        Reclamation reclamation = new Reclamation("Reclamation 1", daoCommande.findOne(5L));
-//        reclamationS.ajouterReclamation(reclamation);
-//    }
+    @Test
+    public void supprimerReclamationKO() {
+       reclamationS.supprimerReclamation(1000L);
+    }
 
-//    @Test
-//    public void supprimerReclamationOK() {
-//        reclamationS.supprimerReclamation(2L);
-//    }
-
-//    @Test
-//    public void afficherListeReclamationsOK() {
-//        reclamationS.afficherListeReclamations();
-//    }
+    @Test
+    public void afficherListeReclamationsOK() {
+        reclamationS.afficherListeReclamations();
+    }
 
 }

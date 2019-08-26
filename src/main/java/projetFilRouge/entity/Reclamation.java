@@ -70,6 +70,10 @@ public class Reclamation implements Serializable {
     public void setCommandeReclamation(Commande commandeReclamation) {
         this.commandeReclamation = commandeReclamation;
     }
+    
+    
+    
+    
 
     @Override
     public int hashCode() {

@@ -44,7 +44,7 @@ public class LigneDeCommandeServiceTest {
     
 //    @Test
 //    public void ajouterLigneDeCommandeOK(){
-//        LigneDeCommande ligneCmd = new LigneDeCommande(2L, LigneDeCommande.TypeLigneDeCommande.COMMANDE);
+//        LigneDeCommande ligneCmd = new LigneDeCommande(1L, LigneDeCommande.TypeLigneDeCommande.COMMANDE);
 //        ligneCmdS.ajouterLigneDeCommande(ligneCmd);
 //    }
     

@@ -20,7 +20,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //Persistence.createEntityManagerFactory("projetFilRouge_PU");
+        Persistence.createEntityManagerFactory("projetFilRouge_PU");
         
     }
     

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import projetFilRouge.dao.ReclamationDAOCrud;
 import projetFilRouge.entity.Reclamation;
+import projetFilRouge.entity.Commande;
 
 /**
  *
@@ -24,12 +25,21 @@ public class ReclamationService {
     @Autowired
     private ReclamationDAOCrud dao;
     
-    public void ajouterReclamation(Reclamation reclamation){ // OK
-        dao.save(reclamation);
+     //On ajoutte une réclamation sur une commande déterminée !!! 
+    public void ajouterReclamation(Reclamation uneReclamation, Commande uneCommande){ // OK
+        if(uneCommande != null ) {
+            uneCommande.getReclamations().add(uneReclamation);
+            uneReclamation.setCommandeReclamation(uneCommande);
+            dao.save(uneReclamation);
+        }
     }
     
     public void supprimerReclamation(Long idReclamation){
-        dao.delete(dao.findOne(idReclamation));
+         if(dao.findOne(idReclamation) != null) {
+            dao.delete(dao.findOne(idReclamation));
+         }else{
+              System.out.println("La reclamation avec id " + idReclamation + "n'existe pas en BD");
+        }
     }
     
     public List<Reclamation> afficherListeReclamations(){ // OK
