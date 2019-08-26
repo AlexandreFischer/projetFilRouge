@@ -15,6 +15,7 @@ import projetFilRouge.entity.Article;
 /**
  *
  * @author alexa
+ * @correction Jean
  */
 @Transactional
 @Service
@@ -22,20 +23,40 @@ public class ArticleService {
 
     @Autowired
     private ArticleDAOCrud dao;
-
+   
+    
+    //On ajoutte un article en BD 
     public void ajouterArticle(Article article) {
-        dao.save(article);
+       if(article != null) {
+            
+            //On vérifie que l'article n'est pas présent dans la BD. 
+            //Sans cette condition de contrôle, si l'article passé en paramètre existe dans la BD alors une erreur rouge est lancé
+            if( dao.findByNom(article.getNom()) == null  ) {  //s'il n'existe pas dans la BD (null 
+                 dao.save(article);
+            }
+        }
     }
-
-    public void modifierArticle(Article article) {
-        Article art = dao.findOne(article.getId());
-        dao.save(art);
+    
+    
+    public void  modifierArticle(Article articleBD, Article articleAvecLesModifications){
+       
+        if(   articleBD  != null ) { //l'article "articleBD" existe dans la BD , alors on peut le modifier
+             Long Id_articleBD = articleBD.getId();
+             Article art       = dao.findById(Id_articleBD);
+             art.setNom( articleAvecLesModifications.getNom() );
+             dao.save(art);
+        }
     }
-
+    
+  
+    
     public void supprimerArticle(String nomArticle) {
-        dao.delete(dao.findByNom(nomArticle));
+        if( dao.findByNom(nomArticle) != null  ) {     //s'il existe dans la BD , alors on peut le supprimer
+            dao.delete(dao.findByNom(nomArticle));
+        }
     }
 
+    
     public List<Article> afficherListeArticle() {
         System.out.println((List<Article>) dao.findAll());
         return (List<Article>) dao.findAll();

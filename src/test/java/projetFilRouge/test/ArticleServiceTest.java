@@ -20,6 +20,7 @@ import projetFilRouge.spring.SpringConfig;
 /**
  *
  * @author alexa
+ * @correction Jean
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfig.class)
@@ -35,47 +36,90 @@ public class ArticleServiceTest {
 
     @Test
     public void creerArticleOK(){
-        Article article = new Article("Chaussons", 20.99, 1, 1, 15);
+        Article article = new Article("chaussure", "belles chaussures", 20.99, 1 , 2, 3, Article.Categorie.HOMME);             
+        article.setCategorie(Article.Categorie.HOMME);
+        articleS.ajouterArticle(article);
+        
+        Article article2 = new Article("pantalon", "le pantalon blanc", 15.20, 1 , 2, 3, Article.Categorie.HOMME);
+        articleS.ajouterArticle(article2);
+    }
+    
+    
+    @Test
+    public void creerArticleKO(){  //L'article "chaussure existe déjà et donc l'erreur qui était lancé ne se lance plus
+        Article article = new Article("chaussure", "belles chaussures", 20.99, 1 , 2, 3, Article.Categorie.HOMME);             
         article.setCategorie(Article.Categorie.HOMME);
         articleS.ajouterArticle(article);
     }
     
-//    @Test
-//    public void modifierArticleOK(){
-//        
-//        Article art = daoArticle.findByNom("trotinette");
-//        art.setNom("TROTINETTE");
-//        articleS.modifierArticle(art);
-//    }
     
-//    @Test
-//    public void afficherListeArticleOK(){
-//        articleS.afficherListeArticle();
-//    }
     
-//    @Test
-//    public void afficherArticleParCategorieHommeOK(){
-//        articleS.afficherArticleParCategorieHomme();
-//    }
+     @Test
+    public void modifierArticleOK(){
+        Article articleBD = daoArticle.findByNom("pantalon");//peut renvoyer null si l'article "pantalon" n'existe pas en BD  
+        Article articleAvecModifications = new Article();
+        articleAvecModifications.setNom("Super pantalon");
+        articleAvecModifications.setPrixHT(150.66);
+        articleAvecModifications.setCategorie(Article.Categorie.FEMME);
+        articleAvecModifications.setDelaisAppros(8);
+        articleAvecModifications.setDelaisDeLivraisonArt(10);
+        articleAvecModifications.setQuantiteStock(300);
+        articleS.modifierArticle(articleBD, articleAvecModifications);
+    }
     
-//    @Test
-//    public void afficherArticleParCategorieFemmeOK() {
-//        articleS.afficherArticleParCategorieFemme();
-//    }
     
-//    @Test
-//    public void afficherArticleParCategorieSacOK() {
-//        articleS.afficherArticleParCategorieSac();
-//    }
+     
+    @Test
+    public void modifierArticleKO(){  //l'article "chips" n'existe pas en BD et on veut y acceder pour le modifier !!!
+        Article articleBD = daoArticle.findByNom("chips");  //peut renvoyer null si l'article "Chaussons" n'existe pas en BD  
+        Article articleAvecModifications = new Article();
+        articleAvecModifications.setNom("Les chips");
+        articleS.modifierArticle(articleBD, articleAvecModifications);
+    }
     
-//    @Test
-//    public void afficherArticleParNomOK(){
-//        articleS.afficherArticleParNom("sac cuir");
-//    }
+
+   @Test
+    public void afficherListeArticleOK(){
+       articleS.afficherListeArticle();
+   }
     
-//    @Test
-//    public void supprimerArticleOK(){
-//        articleS.supprimerArticle("sac cuir");
-//    }
+    @Test
+    public void afficherArticleParCategorieHommeOK(){
+        articleS.afficherArticleParCategorieHomme();
+    }
+    
+    @Test
+    public void afficherArticleParCategorieFemmeOK() {
+        articleS.afficherArticleParCategorieFemme();
+    }
+    
+    @Test
+    public void afficherArticleParCategorieSacOK() {
+        articleS.afficherArticleParCategorieSac();
+    }
+    
+    
+   @Test
+    public void afficherArticleParNomOK(){
+        articleS.afficherArticleParNom("chemise");
+    }
+    
+    
+    @Test
+    public void afficherArticleParNomKO(){
+        articleS.afficherArticleParNom("sac inexistant");
+    }
+    
+    
+    @Test
+    public void supprimerArticleOK(){
+        articleS.supprimerArticle("Li chassure");
+        articleS.supprimerArticle("Lo chassure");
+    }
+    
+     @Test
+    public void supprimerArticleKO(){
+        articleS.supprimerArticle("sac inexistant");
+    }
     
 }
