@@ -33,12 +33,12 @@ public class ArticleServiceTest {
     @Autowired
     private ArticleDAOCrud daoArticle;
 
-    @Test
-    public void creerArticleOK(){
-        Article article = new Article("Chaussons", 20.99, 1, 1, 15);
-        article.setCategorie(Article.Categorie.HOMME);
-        articleS.ajouterArticle(article);
-    }
+//    @Test
+//    public void creerArticleOK(){
+//        Article article = new Article("Chaussons", 20.99, 1, 1, 15);
+//        article.setCategorie(Article.Categorie.HOMME);
+//        articleS.ajouterArticle(article);
+//    }
     
 //    @Test
 //    public void modifierArticleOK(){
