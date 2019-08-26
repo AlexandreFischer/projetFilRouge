@@ -32,9 +32,11 @@ public class CommentaireService {
     
     //On ajoutte un commentaire à un article déterminé !!! 
     public void ajouterCommentaire(Commentaire commentaire, Article unArticle){
-        unArticle.getCommentairesArticle().add(commentaire);
-        commentaire.setArticleco(unArticle);
-        dao.save(commentaire);
+        if(unArticle != null ) {
+            unArticle.getCommentairesArticle().add(commentaire);
+            commentaire.setArticleco(unArticle);
+            dao.save(commentaire);
+        }
     }
     
     public void supprimerCommentaire(long idCommentaire){
