@@ -12,21 +12,32 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import projetFilRouge.entity.Article;
+import projetFilRouge.service.ArticleService;
+import projetFilRouge.spring.AutowireServlet;
 
 /**
  *
  * @author alexa
  */
 @WebServlet(name = "HomepageServlet", urlPatterns = {"/homepage"})
-public class HomepageServlet extends HttpServlet {
+public class HomepageServlet extends AutowireServlet {
+    
+    @Autowired
+    private ArticleService service;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
         // Appel services au besoin
+        //service.ajouterArticle(new Article("JUPE", "Jupe beige", 25.50, 2, 2, 30, Article.Categorie.FEMME));
+        
+        req.setAttribute("msg", "Message vers ma JSP");
+        req.setAttribute("articles", service.afficherListeArticle());
         
         // Renvoi vers 1 vue ( JSP )
-        req.getRequestDispatcher("homepage.jsp").forward(req, resp);
+        req.getRequestDispatcher("homepage.jsp").forward(req, resp); 
     }
     
     

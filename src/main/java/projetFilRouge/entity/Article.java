@@ -64,9 +64,6 @@ public class Article implements Serializable {
     @OneToMany(mappedBy = "articleco") 
     private List<Commentaire> commentairesArticle = new ArrayList<>();
 
-   
-    
-
     public Article(){
         
     }
@@ -89,7 +86,6 @@ public class Article implements Serializable {
     }
     //===========================================================================================================
 
-    
     
     public Long getId() {
         return id;
