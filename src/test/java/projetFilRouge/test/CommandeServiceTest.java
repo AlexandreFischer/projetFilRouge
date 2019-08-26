@@ -25,10 +25,10 @@ import projetFilRouge.spring.SpringConfig;
  * @author valery
  */
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = SpringConfig.class)
-@Rollback(false) //actualiser BD
-@Transactional
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = SpringConfig.class)
+//@Rollback(false) //actualiser BD
+//@Transactional
 public class CommandeServiceTest {
     
     
@@ -36,16 +36,21 @@ public class CommandeServiceTest {
     private CommandeService commandeS;
     
    
-    @Test
-    public void ajouterCommandeOK(){
-//        Client client = new Client();
-//        client.setNom("TOTO");
-//        client.setMail("lsufd@sdfs.com"); 
-//        client.setPassword("toto");
-//        client.setPointFidelite(500);
-//        Commande cmd = new Commande(520.50, "ok cgv",10, new Date(), client);
-//        Article art = new Article("trotinette", 120.59D, 3, 7, 30);
-          commandeS.ajouterPanier(1, 1, 2);
-    }
+//    @Test
+//    public void ajouterCommandeOK(){
+////        Client client = new Client();
+////        client.setNom("TOTO");
+////        client.setMail("lsufd@sdfs.com"); 
+////        client.setPassword("toto");
+////        client.setPointFidelite(500);
+////        Commande cmd = new Commande(520.50, "ok cgv",10, new Date(), client);
+////        Article art = new Article("trotinette", 120.59D, 3, 7, 30);
+//          commandeS.ajouterPanier(2, 1, 2);
+//    }
+    
+//    @Test
+//    public void afficherListeCommandeOK(){
+//        commandeS.afficherListeCommande();
+//    }
     
 }

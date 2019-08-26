@@ -22,10 +22,10 @@ import projetFilRouge.spring.SpringConfig;
  * @author alexa
  * @correction Jean
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = SpringConfig.class)
-@Rollback(false)
-@Transactional
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = SpringConfig.class)
+//@Rollback(false)
+//@Transactional
 public class ArticleServiceTest {
 
     @Autowired
@@ -34,15 +34,14 @@ public class ArticleServiceTest {
     @Autowired
     private ArticleDAOCrud daoArticle;
 
-    @Test
-    public void creerArticleOK(){
-        Article article = new Article("chaussure", "belles chaussures", 20.99, 1 , 2, 3, Article.Categorie.HOMME);             
-        article.setCategorie(Article.Categorie.HOMME);
-        articleS.ajouterArticle(article);
-        
-        Article article2 = new Article("pantalon", "le pantalon blanc", 15.20, 1 , 2, 3, Article.Categorie.HOMME);
-        articleS.ajouterArticle(article2);
-    }
+
+//    @Test
+//    public void creerArticleOK(){
+//        Article article = new Article("Chaussons", 20.99, 1, 1, 15);
+//        article.setCategorie(Article.Categorie.HOMME);
+//        articleS.ajouterArticle(article);
+//    }
+
     
     
     @Test

@@ -25,7 +25,7 @@ public class ReclamationService {
     @Autowired
     private ReclamationDAOCrud dao;
     
-     //On ajoutte une réclamation sur une commande déterminée !!! 
+    //On ajoutte une réclamation sur une commande déterminée !!! 
     public void ajouterReclamation(Reclamation uneReclamation, Commande uneCommande){ // OK
         if(uneCommande != null ) {
             uneCommande.getReclamations().add(uneReclamation);

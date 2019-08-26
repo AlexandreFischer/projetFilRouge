@@ -52,8 +52,6 @@ public class CommentaireService {
         return (List<Commentaire>) dao.findAll();
     }
     
-    
-    
     public List<Commentaire> afficherCommentaireParArticle(Article article){
         List<Commentaire> c = new ArrayList<Commentaire>();
            
