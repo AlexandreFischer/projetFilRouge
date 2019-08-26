@@ -56,9 +56,9 @@ public class ArticleServiceTest {
     
      @Test
     public void modifierArticleOK(){
-        Article articleBD = daoArticle.findByNom("pantalon");//peut renvoyer null si l'article "pantalon" n'existe pas en BD  
+        Article articleBD = daoArticle.findByNom("Super pantalon");//peut renvoyer null si l'article "pantalon" n'existe pas en BD  
         Article articleAvecModifications = new Article();
-        articleAvecModifications.setNom("Super pantalon");
+        articleAvecModifications.setNom("pantalon");
         articleAvecModifications.setPrixHT(150.66);
         articleAvecModifications.setCategorie(Article.Categorie.FEMME);
         articleAvecModifications.setDelaisAppros(8);
