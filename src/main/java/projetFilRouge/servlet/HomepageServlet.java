@@ -21,7 +21,7 @@ import projetFilRouge.spring.AutowireServlet;
  *
  * @author alexa
  */
-@WebServlet(name = "HomepageServlet", urlPatterns = {"/homepage"})
+@WebServlet(name = "HomepageServlet", urlPatterns = {"/accueil"})
 public class HomepageServlet extends AutowireServlet {
     
     @Autowired
@@ -33,11 +33,11 @@ public class HomepageServlet extends AutowireServlet {
         // Appel services au besoin
         //service.ajouterArticle(new Article("JUPE", "Jupe beige", 25.50, 2, 2, 30, Article.Categorie.FEMME));
         
-        req.setAttribute("msg", "Message vers ma JSP");
-        req.setAttribute("articles", service.afficherListeArticle());
+//        req.setAttribute("msg", "Message vers ma JSP");
+//        req.setAttribute("articles", service.afficherListeArticle());
         
         // Renvoi vers 1 vue ( JSP )
-        req.getRequestDispatcher("homepage.jsp").forward(req, resp); 
+        req.getRequestDispatcher("index.jsp").forward(req, resp); 
     }
     
     

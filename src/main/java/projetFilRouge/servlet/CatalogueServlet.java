@@ -21,7 +21,7 @@ import projetFilRouge.spring.AutowireServlet;
  * @author alexa
  */
 @WebServlet(name = "ListeDeTousLesArticles", urlPatterns = {"/catalogue"})
-public class ListeDeTousLesArticles extends AutowireServlet {
+public class CatalogueServlet extends AutowireServlet {
 
     @Autowired
     private ArticleService service;
