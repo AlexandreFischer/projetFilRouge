@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 import projetFilRouge.dao.ArticleDAOCrud;
 import projetFilRouge.dao.CommentaireDAOCrud;
+import projetFilRouge.entity.Article;
 import projetFilRouge.entity.Commentaire;
 import projetFilRouge.service.ClientService;
 import projetFilRouge.service.CommentaireService;
@@ -39,24 +40,37 @@ public class CommentaireServiceTest {
     @Autowired
     private ArticleDAOCrud daoArticle;
     
-//    @Test
-//    public void creerCommentaireOK(){
-//        Commentaire commentaire = new Commentaire("Commentaire 1");
-//        commentaireS.ajouterCommentaire(commentaire);
-//    }
+    @Test
+    public void creerCommentaireOK(){
+        Commentaire commentaire = new Commentaire("Commentaire 1");
+        Article unArticle = daoArticle.findByNom("Chaussons");
+        commentaireS.ajouterCommentaire(commentaire, unArticle);
+    }
     
-//    @Test
-//    public void supprimerCommentaireOK(){
-//        commentaireS.supprimerCommentaire(8);
-//   }
     
-//    @Test
-//    public void afficherListeCommentairesOK(){
-//        commentaireS.afficherListeCommentaires();
-//    }
+    @Test
+    public void supprimerCommentaireOK(){
+        commentaireS.supprimerCommentaire(2);
+    }
     
-//    @Test
-//    public void afficherCommentaireParArticleOK(){
-//        commentaireS.afficherCommentaireParArticle(daoArticle.findByNom("sac a dos"));
-//    }
+    @Test
+    public void supprimerCommentaireKO(){
+        commentaireS.supprimerCommentaire(1000);
+    }
+    
+    @Test
+    public void afficherListeCommentairesOK(){
+       commentaireS.afficherListeCommentaires();
+  }
+    
+    
+    @Test
+    public void afficherCommentaireParArticleOK(){
+        commentaireS.afficherCommentaireParArticle(daoArticle.findByNom("SAC"));
+    }
+    
+    @Test
+    public void afficherCommentaireParArticleKO(){
+        commentaireS.afficherCommentaireParArticle(daoArticle.findByNom("Chaussons"));
+    }
 }

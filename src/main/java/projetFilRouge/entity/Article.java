@@ -62,7 +62,9 @@ public class Article implements Serializable {
     
     //lien vers table Commentaire
     @OneToMany(mappedBy = "articleco") 
-    private List<Commentaire> commentairesA = new ArrayList<>();
+    private List<Commentaire> commentairesArticle = new ArrayList<>();
+
+   
     
 
     public Article(){
@@ -85,7 +87,7 @@ public class Article implements Serializable {
         this.quantiteStock = quantiteStock;
         this.categorie = categorie;
     }
-    
+    //===========================================================================================================
 
     
     
@@ -160,6 +162,15 @@ public class Article implements Serializable {
     public void setListeLigneDeCommandes(List<LigneDeCommande> listeLigneDeCommandes) {
         this.listeLigneDeCommandes = listeLigneDeCommandes;
     }
+    
+    
+     public List<Commentaire> getCommentairesArticle() {
+        return commentairesArticle;
+    }
+
+    //public void setCommentairesArticle(List<Commentaire> commentairesArticle) {
+    //     this.commentairesArticle = commentairesArticle;
+    //}
     
     
 

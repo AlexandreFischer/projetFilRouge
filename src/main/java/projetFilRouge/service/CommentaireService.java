@@ -5,6 +5,7 @@
  */
 package projetFilRouge.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,12 +30,19 @@ public class CommentaireService {
     @Autowired
     private ArticleDAOCrud daoArticle;
     
-    public void ajouterCommentaire(Commentaire commentaire){
+    //On ajoutte un commentaire à un article déterminé !!! 
+    public void ajouterCommentaire(Commentaire commentaire, Article unArticle){
+        unArticle.getCommentairesArticle().add(commentaire);
+        commentaire.setArticleco(unArticle);
         dao.save(commentaire);
     }
     
     public void supprimerCommentaire(long idCommentaire){
-        dao.delete(dao.findOne(idCommentaire));
+        if(dao.findOne(idCommentaire) != null) {
+            dao.delete(dao.findOne(idCommentaire));
+        }else{
+              System.out.println("Le commentarie avec id " + idCommentaire + "n'existe pas");
+        }
     }
     
     public List<Commentaire> afficherListeCommentaires(){
@@ -42,8 +50,30 @@ public class CommentaireService {
         return (List<Commentaire>) dao.findAll();
     }
     
+    
+    
     public List<Commentaire> afficherCommentaireParArticle(Article article){
-        System.out.println(dao.findByArticleco(daoArticle.findByNom(article.getNom())));
-        return dao.findByArticleco(daoArticle.findByNom(article.getNom()));
+        List<Commentaire> c = new ArrayList<Commentaire>();
+           
+        if(article == null){  //"si l'article n'extiste Pas (article == null) alors une erreur va se lancer et le test ne marchera pas !!!!);
+                System.out.println();
+                System.out.println("===================================================================");
+                //System.out.println("Cet article n'extiste Pas"); 
+                System.out.println("===================================================================");
+                System.out.println();
+                
+        }else {  //(article != null
+                System.out.println();
+                System.out.println("===================================================================");
+                System.out.println(article.getNom());  //Cet article EXISTE"); 
+                System.out.println("===================================================================");
+                System.out.println();
+                System.out.println(dao.findByArticleco(daoArticle.findByNom(article.getNom())));
+               c = dao.findByArticleco(daoArticle.findByNom(article.getNom())); 
+               
+               System.out.println("===================================================================");
+               System.out.println();
+        }
+        return c;
     }
 }

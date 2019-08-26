@@ -32,7 +32,7 @@ public class LigneDeCommandeService {
     
     public void modifierQuantiteLigneDeCommande(LigneDeCommande ligneCmd, Long quantite){
         LigneDeCommande ligneDeCmd = dao.findOne(ligneCmd.getId());
-        ligneCmd.setQuantiteArticle(quantite);
+        ligneDeCmd.setQuantiteArticle(quantite);
         dao.save(ligneDeCmd);
     }
 
