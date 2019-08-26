@@ -57,9 +57,10 @@ public class ArticleService {
     }
 
     
-    public List<Article> afficherListeArticle() {
+    public Iterable<Article> afficherListeArticle() {
         System.out.println((List<Article>) dao.findAll());
-        return (List<Article>) dao.findAll();
+        //return (List<Article>) dao.findAll();
+        return dao.findAll();
     }
 
     public List<Article> afficherArticleParCategorieHomme() {
