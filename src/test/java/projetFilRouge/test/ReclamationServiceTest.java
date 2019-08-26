@@ -37,39 +37,39 @@ public class ReclamationServiceTest {
     @Autowired
     private CommandeDAOCrud daoCommande;
       
-    @Test
-    public void creerReclamationOK() {
-        Reclamation r = new Reclamation("Reclamation 1");
-        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
-        reclamationS.ajouterReclamation(r, c);
-    }
-    @Test
-    public void creerReclamation2OK() {
-        Reclamation r = new Reclamation("Reclamation 2");
-        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
-        reclamationS.ajouterReclamation(r, c);
-    }
-    
-    @Test
-    public void creerReclamationKO() {
-        Reclamation r = new Reclamation("Reclamation 1");
-        Commande c = daoCommande.findOne(1000L);   //cette commande ne doit pas exister en BD
-        reclamationS.ajouterReclamation(r, c);
-    }
-
-    @Test
-    public void supprimerReclamationOK() {
-       reclamationS.supprimerReclamation(2L);
-    }
-    
-    @Test
-    public void supprimerReclamationKO() {
-       reclamationS.supprimerReclamation(1000L);
-    }
-
-    @Test
-    public void afficherListeReclamationsOK() {
-        reclamationS.afficherListeReclamations();
-    }
+//    @Test
+//    public void creerReclamationOK() {
+//        Reclamation r = new Reclamation("Reclamation 1");
+//        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
+//        reclamationS.ajouterReclamation(r, c);
+//    }
+//    @Test
+//    public void creerReclamation2OK() {
+//        Reclamation r = new Reclamation("Reclamation 2");
+//        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
+//        reclamationS.ajouterReclamation(r, c);
+//    }
+//    
+//    @Test
+//    public void creerReclamationKO() {
+//        Reclamation r = new Reclamation("Reclamation 1");
+//        Commande c = daoCommande.findOne(1000L);   //cette commande ne doit pas exister en BD
+//        reclamationS.ajouterReclamation(r, c);
+//    }
+//
+//    @Test
+//    public void supprimerReclamationOK() {
+//       reclamationS.supprimerReclamation(2L);
+//    }
+//    
+//    @Test
+//    public void supprimerReclamationKO() {
+//       reclamationS.supprimerReclamation(1000L);
+//    }
+//
+//    @Test
+//    public void afficherListeReclamationsOK() {
+//        reclamationS.afficherListeReclamations();
+//    }
 
 }
