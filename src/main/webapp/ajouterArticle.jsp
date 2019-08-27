@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
+    <title>Backoffice</title>
     	<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
 	<!--===============================================================================================-->
@@ -65,13 +65,13 @@
                                 <span class="input-group-addon"><i class="fa fa-envelope fa"
                                         aria-hidden="true"></i></span>
                                 <input type="text" class="form-control" name="email" id="email"
-                                    placeholder="DÃ©crivez votre article" />
+                                    placeholder="Décrivez votre article" />
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                      <label for="password2" class="cols-sm-2 control-label">CatÃ©gorie</label>
+                      <label for="password2" class="cols-sm-2 control-label">Catégorie</label>
                       <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg"
@@ -83,23 +83,23 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="confirm3" class="cols-sm-2 control-label">DÃ©lais Appro</label>
+                      <label for="confirm3" class="cols-sm-2 control-label">Délais Appro</label>
                       <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg"
                                         aria-hidden="true"></i></span>
                                 <input type="password" class="form-control" name="confirm"
-                                    id="confirm" placeholder="Quel dÃ©lais d'approvisionnement ?" />
+                                    id="confirm" placeholder="Quel délais d'approvisionnement ?" />
                             </div>
                         </div>
                     </div>
       <div class="form-group">
-        <label for="confirm6" class="cols-sm-2 control-label">DÃ©lais Livraison</label>
+        <label for="confirm6" class="cols-sm-2 control-label">Délais Livraison</label>
         <div class="cols-sm-10">
                         <div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock fa-lg"
                                         aria-hidden="true"></i></span>
                           <input type="password" class="form-control" name="confirm2"
-                                    id="confirm2" placeholder="Quel dÃ©lais de livraison ?" />
+                                    id="confirm2" placeholder="Quel délais de livraison ?" />
                         </div>
                       </div>
                     </div>
@@ -109,13 +109,14 @@
                         <div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock fa-lg"
                                         aria-hidden="true"></i></span>
                           <input type="password" class="form-control" name="confirm2"
-                                    id="confirm3" placeholder="RÃ©fÃ©rence emplacement dans le dossier image..." />
+                                    id="confirm3" placeholder="Référence emplacement dans le dossier image..." />
                         </div>
                       </div>
                     </div>
-</form>
-                <a href="index.html"><button type="button" class="btn btn-secondary">Fermer</button></a>
+                        <a href="index.html"><button type="button" class="btn btn-secondary">Fermer</button></a>
                 <button type="button" class="btn btn-primary">Ajouter article</button>
+    </form>
+
 
 <!--===============================================================================================-->
 <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
