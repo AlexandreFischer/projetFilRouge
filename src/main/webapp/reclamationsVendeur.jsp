@@ -52,15 +52,16 @@
 				<!-- Logo desktop -->
 				<a href="index.html" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
 				<!-- Menu desktop -->
-				<div class="menu-desktop">
-					<ul class="main-menu">
-						<li><a href="index.html">Accueil</a></li>
-						<li class="active-menu"><a href="produits.html">Catalogue</a></li>
-						<li><a data-toggle="modal" href="#modalRegister">CrÃ©er son compte</a></li>
-						<li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li>
-						<li> <a href="contact.html">Contact</a> </li>
-					</ul>
-				</div>
+				
+				<div class="menu-desktopVendeur">
+				  <ul class="main-menu">
+				    <li><a href="accueil">Accueil</a></li>
+				    <li><a href="articleVendeur">Gérer les articles</a></li>
+				    <li><a href="commentairesVendeur">Gérer les commentaires</a></li>
+				    <li class="active-menu"><a href="reclamationsVendeur">Gérer les réclamations</a></li>
+				    <li><a data-toggle="modal" href="#ajoutArticleVendeur">Ajouter article</a></li>
+			      </ul>
+			  </div>
 
 				<!-- Modal Inscription -->
 				<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog"

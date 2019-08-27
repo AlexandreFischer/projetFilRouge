@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import projetFilRouge.entity.Article;
 import projetFilRouge.service.ArticleService;
 import projetFilRouge.spring.AutowireServlet;
 
@@ -21,22 +21,19 @@ import projetFilRouge.spring.AutowireServlet;
  *
  * @author alexa
  */
-@WebServlet(name = "ContactServlet", urlPatterns = {"/contact"})
-public class ContactServlet extends AutowireServlet {
+@WebServlet(name = "ReclamationVendeurServlet", urlPatterns = {"/reclamationsVendeur"})
+public class ReclamationVendeurServlet extends AutowireServlet {
     
-
+ 
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
         // Appel services au besoin
-        //service.ajouterArticle(new Article("JUPE", "Jupe beige", 25.50, 2, 2, 30, Article.Categorie.FEMME));
-        
-//        req.setAttribute("msg", "Message vers ma JSP");
-//        req.setAttribute("articles", service.afficherListeArticle());
         
         // Renvoi vers 1 vue ( JSP )
-        req.getRequestDispatcher("contact.jsp").forward(req, resp); 
+        System.out.println(req.getSession().getAttribute("clientConnecte"));
+        req.getRequestDispatcher("reclamationsVendeur.jsp").forward(req, resp);
     }
     
     

@@ -8,7 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
      <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
-        
+    .menu-desktopVendeur {
+}
     </style>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -52,153 +53,116 @@
 				<!-- Logo desktop -->
 				<a href="index.html" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
 				<!-- Menu desktop -->
-				<div class="menu-desktop">
+				<div class="menu-desktopVendeur">
 					<ul class="main-menu">
-						<li><a href="index.html">Accueil</a></li>
-						<li class="active-menu"><a href="produits.html">Catalogue</a></li>
-						<li><a data-toggle="modal" href="#modalRegister">CrÃ©er son compte</a></li>
-						<li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li>
-						<li> <a href="contact.html">Contact</a> </li>
+						<li><a href="accueil">Accueil</a></li>
+						<li class="active-menu"><a href="articleVendeur">Gérer les articles</a></li>
+						<li><a href="commentairesVendeur">Gérer les commentaires</a></li>
+						<li><a href="reclamationsVendeur">Gérer les réclamations</a></li>
+						<li> <a data-toggle="modal" href="#ajoutArticleVendeur">Ajouter article</a> </li>
 					</ul>
 				</div>
 
-				<!-- Modal Inscription -->
-				<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog"
-					aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog " role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">CrÃ©er mon compte</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
+			
+    <!-- Modal Ajout article -->
+    <h5 class="modal-title" id="ajoutArticlevendeur">Ajouter un article</h5>
+    <form role="form">
+      <div class="form-group">
+        <label for="name" class="cols-sm-2 control-label">Nom Article</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user fa"
+                                        aria-hidden="true"></i></span>
+            <input type="text" class="form-control" name="name" id="name"
+                                    placeholder="Nom de l'article" />
+            </div>
+          </div>
+        </div>
+      
+      <div class="form-group">
+        <label for="email2" class="cols-sm-2 control-label">Description</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope fa"
+                                        aria-hidden="true"></i></span>
+            <input type="text" class="form-control" name="email" id="email"
+                                    placeholder="Décrivez votre article" />
+            </div>
+          </div>
+        </div>
+      
+      <div class="form-group">
+        <label for="password2" class="cols-sm-2 control-label">Catégorie</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock fa-lg"
+                                        aria-hidden="true"></i></span>
+            <input type="password" class="form-control" name="password"
+                                    id="password" placeholder="HOMME / FEMME / SAC" />
+            </div>
+          </div>
+        </div>
+      
+      <div class="form-group">
+        <label for="confirm3" class="cols-sm-2 control-label">Délais Appro</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock fa-lg"
+                                        aria-hidden="true"></i></span>
+            <input type="password" class="form-control" name="confirm"
+                                    id="confirm" placeholder="Quel délais d'approvisionnement ?" />
+            </div>
+          </div>
+        </div>
+      <div class="form-group">
+        <label for="confirm6" class="cols-sm-2 control-label">Délais Livraison</label>
+        <div class="cols-sm-10">
+          <div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock fa-lg"
+                                        aria-hidden="true"></i></span>
+            <input type="password" class="form-control" name="confirm2"
+                                    id="confirm2" placeholder="Quel délais de livraison ?" />
+            </div>
+          </div>
+        </div>
+      <div class="form-group">
+        <label for="confirm7" class="cols-sm-2 control-label">Image source</label>
+        <div class="cols-sm-10">
+          <div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock fa-lg"
+                                        aria-hidden="true"></i></span>
+            <input type="password" class="form-control" name="confirm2"
+                                    id="confirm3" placeholder="Référence emplacement dans le dossier image..." />
+            </div>
+          </div>
+        </div>
+  </form>
+    <a href="index.html"><button type="button" class="btn btn-secondary">Fermer</button></a>
+    <button type="button" class="btn btn-primary">Ajouter article</button>
+    
+  <!--===============================================================================================-->
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/daterangepicker/moment.min.js"></script>
+  <script src="vendor/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/slick/slick.min.js"></script>
+  <script src="js/slick-custom.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/main.js"></script> 
+  
 
-							<div class="modal-body">
-								<form role="form">
-									<div class="form-group">
-										<label for="name" class="cols-sm-2 control-label">Nom</label>
-										<div class="cols-sm-10">
-											<div class="input-group">
-												<span class="input-group-addon"><i class="fa fa-user fa"
-														aria-hidden="true"></i></span>
-												<input type="text" class="form-control" name="name" id="name"
-													placeholder="Entrer votre nom" />
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="email" class="cols-sm-2 control-label">Email</label>
-										<div class="cols-sm-10">
-											<div class="input-group">
-												<span class="input-group-addon"><i class="fa fa-envelope fa"
-														aria-hidden="true"></i></span>
-												<input type="text" class="form-control" name="email" id="email"
-													placeholder="Entrer votre Email" />
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="password" class="cols-sm-2 control-label">Mot de passe</label>
-										<div class="cols-sm-10">
-											<div class="input-group">
-												<span class="input-group-addon"><i class="fa fa-lock fa-lg"
-														aria-hidden="true"></i></span>
-												<input type="password" class="form-control" name="password"
-													id="password" placeholder="Entrer un mot de passe" />
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="confirm" class="cols-sm-2 control-label">Confirmer le mot de
-											passe</label>
-										<div class="cols-sm-10">
-											<div class="input-group">
-												<span class="input-group-addon"><i class="fa fa-lock fa-lg"
-														aria-hidden="true"></i></span>
-												<input type="password" class="form-control" name="confirm" id="confirm"
-													placeholder="Confirmer votre mot de passe" />
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<input type="checkbox" id="checkboxRegister">
-										<label for="checkboxRegister" class="white-text form-check-label">Accepter
-											les<a href="#" class="green-text font-weight-bold"> Conditions
-												gÃ©nÃ©rales</a></label>
-									</div>
-								</form>
-							</div>
-
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-								<button type="button" class="btn btn-primary">CrÃ©er compte</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Modal Login-->
-				<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-					aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">S'identifier</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-
-							<div class="modal-body">
-								<form role="form">
-									<div class="form-group">
-										<label for="email" class="cols-sm-2 control-label">Email</label>
-										<div class="cols-sm-10">
-											<div class="input-group">
-												<span class="input-group-addon"><i class="fa fa-envelope fa"
-														aria-hidden="true"></i></span>
-												<input type="text" class="form-control" name="email" id="email"
-													placeholder="Entrer votre Email" />
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="password" class="cols-sm-2 control-label">Mot de passe</label>
-										<div class="cols-sm-10">
-											<div class="input-group">
-												<span class="input-group-addon"><i class="fa fa-lock fa-lg"
-														aria-hidden="true"></i></span>
-												<input type="password" class="form-control" name="password"
-													id="password" placeholder="Entrer un mot de passe" />
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-								<button type="button" class="btn btn-primary">Connexion</button>
-							</div>
-						</div>
-					</div>
-				</div>
+		
+				
 
 				<!-- Icon header -->
 				<div class="wrap-icon-header flex-w flex-r-m h-full">
 					<div class="flex-c-m h-full p-r-24">
 						<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-modal-search"><i
 								class="zmdi zmdi-search"></i></div>
-					</div>
-					<div class="flex-c-m h-full p-l-18 p-r-25 bor5">
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart"
-							data-notify="3"><i class="zmdi zmdi-shopping-cart"></i></div>
 					</div>
 				</div>
 			</nav>
@@ -364,8 +328,8 @@
 	                                <td>00002</td>
 	                                <td>Homme</td>
 	                                <td>Robe NafNaf</td>
-	                                <td>Robe bleue cintrÃ©e</td>
-	                                <td>32,90 â¬</td>
+	                                <td>Robe bleue cintrée</td>
+	                                <td>32,90 €</td>
 	                                <td>+ 3 jours</td>
 	                                <td>+ 4 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
@@ -382,7 +346,7 @@
 	                                <td>Homme</td>
 	                                <td>Jean's Noir Levi's</td>
 	                                <td>Jean's taille basse noir</td>
-	                                <td>34,90 â¬</td>
+	                                <td>34,90 €</td>
 	                                <td>+ 3 jours</td>
 	                                <td>+ 1 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
@@ -396,9 +360,9 @@
 	                                <td><input type="checkbox" class="checkthis" /></td>
 	                                <td>00232</td>
 	                                <td>Femme</td>
-	                                <td>Chemisier habillÃ©</td>
+	                                <td>Chemisier habillé</td>
 	                                <td>Chemisier bouton vert </td>
-	                                <td>124,90 â¬</td>
+	                                <td>124,90 €</td>
 	                                <td>+ 4 jours</td>
 	                                <td>+ 4 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
@@ -414,7 +378,7 @@
 	                                <td>Sac</td>
 	                                <td>Sac paille</td>
 	                                <td>Sac de plage paille</td>
-	                                <td>72,90 â¬</td>
+	                                <td>72,90 €</td>
 	                                <td>+ 3 jours</td>
 	                                <td>+ 3 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
@@ -430,7 +394,7 @@
 	                                <td>Homme</td>
 	                                <td>Baskets de marque</td>
 	                                <td> Baskets Nike</td>
-	                                <td>99,90 â¬</td>
+	                                <td>99,90 €</td>
 	                                <td>+ 2 jours</td>
 	                                <td>+ 4 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
