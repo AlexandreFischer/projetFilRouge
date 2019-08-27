@@ -10,10 +10,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import projetFilRouge.dao.LigneDeCommandeDAOCrud;
 import projetFilRouge.entity.LigneDeCommande;
+import projetFilRouge.entity.Commande;
 
 /**
  *
  * @author alexa
+ * @Correction Jean-Marie
  */
 @Transactional
 @Service
@@ -22,12 +24,21 @@ public class LigneDeCommandeService {
     @Autowired
     private LigneDeCommandeDAOCrud dao;
     
-    public void ajouterLigneDeCommande(LigneDeCommande ligneCmd){
-        dao.save(ligneCmd);
+    public void ajouterLigneDeCommande(LigneDeCommande ligneCmd, Commande uneCommande){
+         if(uneCommande != null ) {
+            uneCommande.getListeLignedecommande().add(ligneCmd);
+            ligneCmd.setCommande(uneCommande);
+            dao.save(ligneCmd);
+        }
     }
     
+    
     public void supprimerLigneDeCommande(long idLigneDeCommande){
-        dao.delete(dao.findOne(idLigneDeCommande));
+          if(dao.findOne(idLigneDeCommande) != null) {
+             dao.delete(dao.findOne(idLigneDeCommande));
+         }else{
+              System.out.println("La reclamation avec id " + idLigneDeCommande + "n'existe pas en BD");
+        }
     }
     
     public void modifierQuantiteLigneDeCommande(LigneDeCommande ligneCmd, Long quantite){

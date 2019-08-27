@@ -24,6 +24,7 @@ import projetFilRouge.spring.SpringConfig;
 /**
  *
  * @author alexa
+ * @correction jean-marie
  */
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = SpringConfig.class)
