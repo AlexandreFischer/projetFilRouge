@@ -36,7 +36,5 @@ public class HomepageServlet extends AutowireServlet {
         System.out.println(req.getSession().getAttribute("clientConnecte"));
         req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
-    
-    
 
 }

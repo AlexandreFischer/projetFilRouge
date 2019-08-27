@@ -127,12 +127,11 @@
                                                     <a href="#" class="green-text font-weight-bold" data-toggle="modal"  data-target="#myModal"> Conditions générales</a>
                                                 </label>
                                             </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                                <button type="submit" class="btn btn-primary">Créer compte</button>
+                                            </div>
                                         </form>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                        <button type="button" class="btn btn-primary">Créer compte</button>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +211,7 @@
                                     </div>
 
                                     <div class="modal-body">
-                                        <form role="form">
+                                        <form role="form" method="POST" action="connexion">
                                             <div class="form-group">
                                                 <label for="email" class="cols-sm-2 control-label">Email</label>
                                                 <div class="cols-sm-10">
@@ -241,7 +240,7 @@
 
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                        <button type="button" class="btn btn-primary">Connexion</button>
+                                        <button type="submit" class="btn btn-primary">Connexion</button>
                                     </div>
                                 </div>
                             </div>

@@ -30,7 +30,7 @@ public class CatalogueServlet extends AutowireServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // Appel service
         req.setAttribute("articles", service.afficherListeArticle());
-        
+
         // Renvoi vers la vue produits.jsp
         req.getRequestDispatcher("catalogue.jsp").forward(req, resp);
     }
