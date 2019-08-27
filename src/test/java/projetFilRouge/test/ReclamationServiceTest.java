@@ -25,10 +25,10 @@ import projetFilRouge.spring.SpringConfig;
  *
  * @author jean-marie
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = SpringConfig.class)
-@Rollback(false)
-@Transactional
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = SpringConfig.class)
+//@Rollback(false)
+//@Transactional
 public class ReclamationServiceTest {
 
     @Autowired
@@ -37,24 +37,24 @@ public class ReclamationServiceTest {
     @Autowired
     private CommandeDAOCrud daoCommande;
       
-    @Test
-    public void creerReclamationOK() {
-        Reclamation r = new Reclamation("Reclamation 1");
-        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
-        reclamationS.ajouterReclamation(r, c);
-    }
-    @Test
-    public void creerReclamation2OK() {
-        Reclamation r = new Reclamation("Reclamation 2");
-        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
-        reclamationS.ajouterReclamation(r, c);
-    }
-    
-    @Test
-    public void creerReclamationKO() {
-        Reclamation r = new Reclamation("Reclamation 1");
-        Commande c = daoCommande.findOne(1000L);   //cette commande ne doit pas exister en BD
-        reclamationS.ajouterReclamation(r, c);
-    }
+//    @Test
+//    public void creerReclamationOK() {
+//        Reclamation r = new Reclamation("Reclamation 1");
+//        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
+//        reclamationS.ajouterReclamation(r, c);
+//    }
+//    @Test
+//    public void creerReclamation2OK() {
+//        Reclamation r = new Reclamation("Reclamation 2");
+//        Commande c = daoCommande.findOne(1L);     //cette commande doit pas exister en BD
+//        reclamationS.ajouterReclamation(r, c);
+//    }
+//    
+//    @Test
+//    public void creerReclamationKO() {
+//        Reclamation r = new Reclamation("Reclamation 1");
+//        Commande c = daoCommande.findOne(1000L);   //cette commande ne doit pas exister en BD
+//        reclamationS.ajouterReclamation(r, c);
+//    }
 
 }

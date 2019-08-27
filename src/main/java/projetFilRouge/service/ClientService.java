@@ -30,7 +30,7 @@ public class ClientService {
     }
 
     public void seConnecterAuSite(Client client) {
-        System.out.println(dao.findByMailAndPassword(client.getMail(), client.getPassword()));
+        dao.findByMailAndPassword(client.getMail(), client.getPassword());
     }
 
     public void supprimerClient(String nomClient) {

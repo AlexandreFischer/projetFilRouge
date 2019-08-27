@@ -34,7 +34,4 @@ public class CatalogueFemmeServlet extends AutowireServlet {
         // Renvoi vers la vue produits.jsp
         req.getRequestDispatcher("catalogue.jsp").forward(req, resp);
     }
-
-    
-
 }

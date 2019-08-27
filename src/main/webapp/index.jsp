@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="fr">
@@ -65,8 +66,8 @@
                             <ul class="main-menu">
                                 <li class="active-menu"><a href="accueil">Accueil</a></li>
                                 <li><a href="catalogue">Catalogue</a></li>
-                                <li><a data-toggle="modal" href="#modalRegister">Créer son compte</a></li>
-                                <li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li>
+                                <c:if test="${empty clientConnecte}"><li><a data-toggle="modal" href="#modalRegister">Créer son compte</a></li></c:if>
+                                <c:if test="${empty clientConnecte}"><li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li></c:if>
                                 <li> <a href="contact">Contact</a> </li>
                             </ul>
                         </div>
@@ -224,7 +225,7 @@
                                     </div>
 
                                     <div class="modal-body">
-                                        <form role="form">
+                                        <form role="form" method="POST" action="connexion">
                                             <div class="form-group">
                                                 <label for="email" class="cols-sm-2 control-label">Email</label>
                                                 <div class="cols-sm-10">
@@ -248,12 +249,9 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                            <button type="submit" class="btn btn-primary">Connexion</button>
                                         </form>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                        <button type="button" class="btn btn-primary">Connexion</button>
                                     </div>
                                 </div>
                             </div>
@@ -427,7 +425,7 @@
         <!-- Slider -->
         <section class="section-slide">
             <div class="wrap-slick1 rs1-slick1">
-                <a href="produits.html"><img
+                <a href="catalogue"><img
                         src="images/paper-bag-mockup-of-a-woman-carrying-a-set-of-shopping-bags-a6677.png" alt=""
                         width="1978" height="1483" class="img-fluid"></a> </div>
         </section>
@@ -467,7 +465,7 @@
                     <div class="block1 wrap-pic-w">
                         <img src="images/banner-05.jpg" alt="IMG-BANNER">
 
-                        <a href="cataloguehomme"
+                        <a href="catalogueHomme"
                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">

@@ -60,8 +60,8 @@
                             <ul class="main-menu">
                                 <li><a href="accueil">Accueil</a></li>
                                 <li class="active-menu"><a href="catalogue">Catalogue</a></li>
-                                <li><a data-toggle="modal" href="#modalRegister">Créer son compte</a></li>
-                                <li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li>
+                                <c:if test="${empty clientConnecte}"><li><a data-toggle="modal" href="#modalRegister">Créer son compte</a></li></c:if>
+                                <c:if test="${empty clientConnecte}"><li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li></c:if>
                                 <li> <a href="contact">Contact</a> </li>
                             </ul>
                         </div>
@@ -451,7 +451,7 @@
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-pic hov-img0">
-                                    <img src="${art.lienImage}" alt="IMG-PRODUCT">
+                                    <img src="<c:url value="${art.lienImage}"></c:url>" alt="IMG-PRODUCT">
                                     <a href="#"
                                        class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
                                         Voir produit
@@ -499,7 +499,7 @@
                     </div>
 
                     <div class="col-sm-6 col-lg-4 p-b-50">
-                        <h4 class="stext-301 cl0 p-b-30"> <a href="contact.html" style="color: white;">CONTACT / SUIVI</a></h4>
+                        <h4 class="stext-301 cl0 p-b-30"> <a href="contact" style="color: white;">CONTACT / SUIVI</a></h4>
                         <p class="stext-107 size-201 couleurElementFooter"> N'hésitez pas à  nous<a href="contact.html"> contacter</a> directement par mail pour toutes
                             questions. Laissez nous vos commentaires sur les articles.</p>
                         <div class="p-t-27">

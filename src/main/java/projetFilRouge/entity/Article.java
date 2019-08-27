@@ -216,8 +216,10 @@ public class Article implements Serializable {
 
     @Override
     public String toString() {
-        return "Article{" + "id=" + id + ", nom=" + nom + ", description=" + description + ", prixHT=" + prixHT + ", delaisAppros=" + delaisAppros + ", delaisDeLivraisonArt=" + delaisDeLivraisonArt + ", quantiteStock=" + quantiteStock + ", categorie=" + categorie + ", listeLigneDeCommandes=" + listeLigneDeCommandes + '}';
+        return "Article{" + "id=" + id + ", nom=" + nom + ", description=" + description + ", prixHT=" + prixHT + ", delaisAppros=" + delaisAppros + ", delaisDeLivraisonArt=" + delaisDeLivraisonArt + ", quantiteStock=" + quantiteStock + ", categorie=" + categorie + ", lienImage=" + lienImage + ", listeLigneDeCommandes=" + listeLigneDeCommandes + ", commentairesArticle=" + commentairesArticle + '}';
     }
+
+
 
 
 

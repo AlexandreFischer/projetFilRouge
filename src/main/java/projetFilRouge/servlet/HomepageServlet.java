@@ -31,13 +31,10 @@ public class HomepageServlet extends AutowireServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
         // Appel services au besoin
-        //service.ajouterArticle(new Article("JUPE", "Jupe beige", 25.50, 2, 2, 30, Article.Categorie.FEMME));
-        
-//        req.setAttribute("msg", "Message vers ma JSP");
-//        req.setAttribute("articles", service.afficherListeArticle());
         
         // Renvoi vers 1 vue ( JSP )
-        req.getRequestDispatcher("index.jsp").forward(req, resp); 
+        System.out.println(req.getSession().getAttribute("clientConnecte"));
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
     
     
