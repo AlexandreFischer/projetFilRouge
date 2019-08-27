@@ -37,7 +37,7 @@ public class ConnexionServlet extends AutowireServlet {
        if(client != null){
            req.getSession().setAttribute("clientConnecte", client);
        }
-
+       // commentaire pour voir
        resp.sendRedirect("accueil");
     }
 }
