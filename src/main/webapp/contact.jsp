@@ -49,15 +49,15 @@
 			<div class="wrap-menu-desktop">
 				<nav class="limiter-menu-desktop p-l-45">
 					<!-- Logo desktop -->
-					<a href="index.html" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
+					<a href="accueil" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li><a href="index.html">Accueil</a></li>
-							<li class="active-menu"><a href="produits.html">Catalogue</a></li>
-							<li><a data-toggle="modal" href="#modalRegister">CrÃ©er son compte</a></li>
+							<li><a href="accueil">Accueil</a></li>
+							<li class="active-menu"><a href="catalogue">Catalogue</a></li>
+							<li><a data-toggle="modal" href="#modalRegister">Créer son compte</a></li>
 							<li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li>
-							<li> <a href="contact.html">Contact</a> </li>
+							<li> <a href="contact">Contact</a> </li>
 						</ul>
 					</div>
 
@@ -67,7 +67,7 @@
 						<div class="modal-dialog " role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">CrÃ©er mon compte</h5>
+									<h5 class="modal-title" id="exampleModalLabel">Créer mon compte</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>

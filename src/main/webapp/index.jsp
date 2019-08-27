@@ -58,16 +58,16 @@
                 <div class="wrap-menu-desktop">
                     <nav class="limiter-menu-desktop p-l-45">
                         <!-- Logo desktop -->
-                        <a href="index.html" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
+                        <a href="accueil" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
 
                         <!-- Menu desktop --------------------------------------------------------------------------------------------------------------------------------- -->
                         <div class="menu-desktop">
                             <ul class="main-menu">
-                                <li class="active-menu"><a href="index.html">Accueil</a></li>
-                                <li><a href="produits.html">Catalogue</a></li>
+                                <li class="active-menu"><a href="accueil">Accueil</a></li>
+                                <li><a href="catalogue">Catalogue</a></li>
                                 <li><a data-toggle="modal" href="#modalRegister">Créer son compte</a></li>
                                 <li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li>
-                                <li> <a href="contact.html">Contact</a> </li>
+                                <li> <a href="contact">Contact</a> </li>
                             </ul>
                         </div>
                         <!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->

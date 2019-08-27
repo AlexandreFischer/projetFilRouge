@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -55,7 +56,7 @@
 					<ul class="main-menu">
 						<li><a href="index.html">Accueil</a></li>
 						<li class="active-menu"><a href="produits.html">Catalogue</a></li>
-						<li><a data-toggle="modal" href="#modalRegister">Créer son compte</a></li>
+						<li><a data-toggle="modal" href="#modalRegister">CrÃ©er son compte</a></li>
 						<li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li>
 						<li> <a href="contact.html">Contact</a> </li>
 					</ul>
@@ -67,7 +68,7 @@
 					<div class="modal-dialog " role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Créer mon compte</h5>
+								<h5 class="modal-title" id="exampleModalLabel">CrÃ©er mon compte</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
@@ -128,14 +129,14 @@
 										<input type="checkbox" id="checkboxRegister">
 										<label for="checkboxRegister" class="white-text form-check-label">Accepter
 											les<a href="#" class="green-text font-weight-bold"> Conditions
-												générales</a></label>
+												gÃ©nÃ©rales</a></label>
 									</div>
 								</form>
 							</div>
 
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-								<button type="button" class="btn btn-primary">Créer compte</button>
+								<button type="button" class="btn btn-primary">CrÃ©er compte</button>
 							</div>
 						</div>
 					</div>
@@ -230,7 +231,7 @@
 			<ul class="main-menu-m">
 				<li><a href="index.html">Accueil</a></li>
 				<li><a href="produits.html">Catalogue</a></li>
-				<li><a href="inscriptionMobile.html">Créer son compte</a></li>
+				<li><a href="inscriptionMobile.html">CrÃ©er son compte</a></li>
 				<li><a href="loginMobile.html">S'identifier</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
@@ -282,7 +283,7 @@
 							</a>
 
 							<span class="header-cart-item-info couleurElementCart">
-								1 x 19.00€
+								1 x 19.00â¬
 							</span>
 						</div>
 					</li>
@@ -298,7 +299,7 @@
 							</a>
 
 							<span class="header-cart-item-info couleurElementCart">
-								1 x 39.00€
+								1 x 39.00â¬
 							</span>
 						</div>
 					</li>
@@ -314,7 +315,7 @@
 							</a>
 
 							<span class="header-cart-item-info couleurElementCart">
-								1 x 17.00€
+								1 x 17.00â¬
 							</span>
 						</div>
 					</li>
@@ -322,7 +323,7 @@
 
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40 couleurElementCart">
-						Total: 75.00€
+						Total: 75.00â¬
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
@@ -363,8 +364,8 @@
 	                                <td>00002</td>
 	                                <td>Homme</td>
 	                                <td>Robe NafNaf</td>
-	                                <td>Robe bleue cintrée</td>
-	                                <td>32,90 €</td>
+	                                <td>Robe bleue cintrÃ©e</td>
+	                                <td>32,90 â¬</td>
 	                                <td>+ 3 jours</td>
 	                                <td>+ 4 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
@@ -381,7 +382,7 @@
 	                                <td>Homme</td>
 	                                <td>Jean's Noir Levi's</td>
 	                                <td>Jean's taille basse noir</td>
-	                                <td>34,90 €</td>
+	                                <td>34,90 â¬</td>
 	                                <td>+ 3 jours</td>
 	                                <td>+ 1 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
@@ -395,9 +396,9 @@
 	                                <td><input type="checkbox" class="checkthis" /></td>
 	                                <td>00232</td>
 	                                <td>Femme</td>
-	                                <td>Chemisier habillé</td>
+	                                <td>Chemisier habillÃ©</td>
 	                                <td>Chemisier bouton vert </td>
-	                                <td>124,90 €</td>
+	                                <td>124,90 â¬</td>
 	                                <td>+ 4 jours</td>
 	                                <td>+ 4 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
@@ -413,7 +414,7 @@
 	                                <td>Sac</td>
 	                                <td>Sac paille</td>
 	                                <td>Sac de plage paille</td>
-	                                <td>72,90 €</td>
+	                                <td>72,90 â¬</td>
 	                                <td>+ 3 jours</td>
 	                                <td>+ 3 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
@@ -429,7 +430,7 @@
 	                                <td>Homme</td>
 	                                <td>Baskets de marque</td>
 	                                <td> Baskets Nike</td>
-	                                <td>99,90 €</td>
+	                                <td>99,90 â¬</td>
 	                                <td>+ 2 jours</td>
 	                                <td>+ 4 jours</td>
 	                                <td><p data-placement="top" data-toggle="tooltip" title="Edit">
@@ -474,7 +475,7 @@
             </div>
           </div>
 	      <div class="modal-footer ">
-	        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+	        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span>Â Update</button>
           </div>
         </div>
 	    <!-- /.modal-content -->
@@ -492,8 +493,8 @@
 	        <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
           </div>
 	      <div class="modal-footer ">
-	        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
-	        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+	        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span>Â Yes</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Â No</button>
           </div>
         </div>
 	    <!-- /.modal-content -->
@@ -541,13 +542,13 @@ $("#mytable #checkall").click(function () {
 						<ul>
 							<li class="p-b-10"> <a href="panier.html" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Suivi de commandes</a>
 							</li>
-							<li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Retours / Réclamations</a></li>
+							<li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Retours / RÃ©clamations</a></li>
 						</ul>
 					</div>
 	
 					<div class="col-sm-6 col-lg-4 p-b-50">
 						<h4 class="stext-301 cl0 p-b-30"> <a href="contact.html" style="color: white;">CONTACT / SUIVI</a></h4>
-						<p class="stext-107 size-201 couleurElementFooter"> N'hésitez pas à nous<a href="contact.html"> contacter</a> directement par mail pour toutes
+						<p class="stext-107 size-201 couleurElementFooter"> N'hÃ©sitez pas Ã  nous<a href="contact.html"> contacter</a> directement par mail pour toutes
 							questions. Laissez nous vos commentaires sur les articles.</p>
 						<div class="p-t-27">
 							<a href="#" class="fs-18 hov-cl1 trans-04 m-r-16">
@@ -660,10 +661,10 @@ $("#mytable #checkall").click(function () {
 							</h4>
 
 							<span class="mtext-106 cl2">
-								€58.79
+								â¬58.79
 							</span>
 
-							<a href="produit-seul.html" class="alignerCommentaire mtext-105"> Détails produit</a>
+							<a href="produit-seul.html" class="alignerCommentaire mtext-105"> DÃ©tails produit</a>
 
 							<p class="stext-102 cl3 p-t-23">
 								Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat
@@ -708,7 +709,7 @@ $("#mytable #checkall").click(function () {
 							<div class="p-t-33">
 								<div class="flex-w flex-r-m p-b-10 alignerStock">
 									<div class="size-203 flex-c-m respon6">
-										Disponibilité
+										DisponibilitÃ©
 									</div>
 									<div class="size-204 respon6-next">
 										<strong>En stock</strong>
@@ -717,7 +718,7 @@ $("#mytable #checkall").click(function () {
 
 								<div class="flex-w flex-r-m p-b-10">
 									<div class="size-204 flex-w flex-m respon6-next">
-										<span style="padding-right:10%;">Quantité</span>
+										<span style="padding-right:10%;">QuantitÃ©</span>
 										<div class="wrap-num-product flex-w m-r-20 m-tb-10">
 											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
 												<i class="fs-16 zmdi zmdi-minus"></i>
@@ -732,7 +733,7 @@ $("#mytable #checkall").click(function () {
 										</div>
 
 										<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-											Ajouter à la commande
+											Ajouter Ã  la commande
 										</button>
 									</div>
 								</div>
@@ -800,7 +801,7 @@ $("#mytable #checkall").click(function () {
 		$('.js-addcart-detail').each(function () {
 			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
 			$(this).on('click', function () {
-				swal(nameProduct, "est ajouté à la commande !", "success");
+				swal(nameProduct, "est ajoutÃ© Ã  la commande !", "success");
 			});
 		});
 

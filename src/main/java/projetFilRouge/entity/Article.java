@@ -25,6 +25,14 @@ import javax.persistence.OneToMany;
 @Entity
 public class Article implements Serializable {
 
+    public String getLienImage() {
+        return lienImage;
+    }
+
+    public void setLienImage(String lienImage) {
+        this.lienImage = lienImage;
+    }
+
     public enum Categorie{
         HOMME,
         FEMME,
@@ -56,6 +64,22 @@ public class Article implements Serializable {
         
     @Enumerated(EnumType.STRING)
     private Categorie categorie;
+    
+    @Column(nullable = false,length = 500)
+    private String lienImage;
+
+    
+    
+    public Article(String nom, String description, Double prixHT, Integer delaisAppros, Integer delaisDeLivraisonArt, Integer quantiteStock, Categorie categorie, String lienImage) {
+        this.nom = nom;
+        this.description = description;
+        this.prixHT = prixHT;
+        this.delaisAppros = delaisAppros;
+        this.delaisDeLivraisonArt = delaisDeLivraisonArt;
+        this.quantiteStock = quantiteStock;
+        this.categorie = categorie;
+        this.lienImage = lienImage;
+    }
 
     @OneToMany(mappedBy = "article",cascade = CascadeType.PERSIST)
     private List<LigneDeCommande> listeLigneDeCommandes = new ArrayList<>();
