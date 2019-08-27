@@ -22,10 +22,10 @@ import projetFilRouge.spring.SpringConfig;
  * @author alexa
  * @correction Jean
  */
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes = SpringConfig.class)
-//@Rollback(false)
-//@Transactional
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = SpringConfig.class)
+@Rollback(false)
+@Transactional
 public class ArticleServiceTest {
 
     @Autowired

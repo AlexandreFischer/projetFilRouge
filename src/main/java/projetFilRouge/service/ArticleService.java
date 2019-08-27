@@ -57,6 +57,7 @@ public class ArticleService {
     }
 
 
+
     public Iterable<Article> afficherListeArticle() {
         System.out.println((List<Article>) dao.findAll());
         return dao.findAll();
