@@ -1,5 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -267,12 +267,14 @@
                                 </div>
                             </div>
 
+                        
                             <div class="flex-c-m h-full p-l-18 p-r-25 bor5">
                                 <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart"
                                      data-notify="3">
                                     <i class="zmdi zmdi-shopping-cart"></i>
                                 </div>
                             </div>
+                        
                         </div>
                         <!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->
                     </nav>
@@ -283,7 +285,7 @@
             <div class="wrap-header-mobile">
                 <!-- Logo moblie -->
                 <div class="logo-mobile">
-                    <a href="index.html"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
+                    <a href="accueil"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
                 </div>
 
                 <!-- Icon header -->
@@ -313,11 +315,11 @@
             <!-- Menu Mobile -->
             <div class="menu-mobile">
                 <ul class="main-menu-m">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="produits.html">Catalogue</a></li>
+                    <li><a href="accueil">Accueil</a></li>
+                    <li><a href="catalogue">Catalogue</a></li>
                     <li><a href="inscriptionMobile.html">Créer son compte</a></li>
                     <li><a href="loginMobile.html">S'identifier</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -338,6 +340,7 @@
             </div>
         </header>
 
+                           
         <!-- Cart -->
         <div class="wrap-header-cart js-panel-cart">
             <div class="s-full js-hide-cart"></div>
@@ -419,6 +422,7 @@
                 </div>
             </div>
         </div>
+        
 
 
 
@@ -439,7 +443,7 @@
                     <div class="block1 wrap-pic-w">
                         <img src="images/banner-04.jpg" alt="IMG-BANNER">
 
-                        <a href="catalogueFemme"
+                        <a href="catalogue"
                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
@@ -465,7 +469,7 @@
                     <div class="block1 wrap-pic-w">
                         <img src="images/banner-05.jpg" alt="IMG-BANNER">
 
-                        <a href="catalogueHomme"
+                        <a href="catalogue"
                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
@@ -491,7 +495,7 @@
                     <div class="block1 wrap-pic-w">
                         <img src="images/banner-06.jpg" alt="IMG-BANNER">
 
-                        <a href="catalogueSacs"
+                        <a href="catalogue"
                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
@@ -524,9 +528,9 @@
                         </h4>
 
                         <ul>
-                            <li class="p-b-10"> <a href="catalogueFemme" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Femme</a></li>
-                            <li class="p-b-10"> <a href="catalogueHomme" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Homme</a></li>
-                            <li class="p-b-10"> <a href="catalogueSacs" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Sacs</a></li>
+                            <li class="p-b-10"> <a href="catalogue" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Femme</a></li>
+                            <li class="p-b-10"> <a href="catalogue" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Homme</a></li>
+                            <li class="p-b-10"> <a href="catalogue" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Sacs</a></li>
                         </ul>
                     </div>
 
