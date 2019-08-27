@@ -44,23 +44,23 @@ public class LigneDeCommandeServiceTest {
     @Autowired
     private LigneDeCommandeDAOCrud daoLigneDeCmd;
     
-   @Test
+//   @Test
     public void ajouterLigneDeCommandeOK(){
         LigneDeCommande ligneCmd = new LigneDeCommande(1L, LigneDeCommande.TypeLigneDeCommande.COMMANDE);
         Commande c = daoCommande.findOneByClientIdAndEtatPanier(2, Commande.EtatPanier.ENCOURS);
         ligneCmdS.ajouterLigneDeCommande(ligneCmd, c);
     }
     
-    @Test
+//    @Test
     public void supprimerLigneDeCommandeOK(){
         ligneCmdS.supprimerLigneDeCommande(3L);
     }
-     @Test
+//     @Test
     public void supprimerLigneDeCommandeKO(){
         ligneCmdS.supprimerLigneDeCommande(3000L);
     }
     
-    @Test
+//    @Test
     public void modifierQuantiteLigneDeCommandeOK(){
         ligneCmdS.modifierQuantiteLigneDeCommande(daoLigneDeCmd.findOne(4L),7L);
     }

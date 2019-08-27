@@ -441,7 +441,7 @@
                     <div class="block1 wrap-pic-w">
                         <img src="images/banner-04.jpg" alt="IMG-BANNER">
 
-                        <a href="produits.html"
+                        <a href="catalogueFemme"
                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
@@ -467,7 +467,7 @@
                     <div class="block1 wrap-pic-w">
                         <img src="images/banner-05.jpg" alt="IMG-BANNER">
 
-                        <a href="produits.html"
+                        <a href="cataloguehomme"
                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
@@ -493,7 +493,7 @@
                     <div class="block1 wrap-pic-w">
                         <img src="images/banner-06.jpg" alt="IMG-BANNER">
 
-                        <a href="produits.html"
+                        <a href="catalogueSacs"
                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
@@ -526,9 +526,9 @@
                         </h4>
 
                         <ul>
-                            <li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Femme</a></li>
-                            <li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Homme</a></li>
-                            <li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Sacs</a></li>
+                            <li class="p-b-10"> <a href="catalogueFemme" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Femme</a></li>
+                            <li class="p-b-10"> <a href="catalogueHomme" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Homme</a></li>
+                            <li class="p-b-10"> <a href="catalogueSacs" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Sacs</a></li>
                         </ul>
                     </div>
 
@@ -542,8 +542,8 @@
                     </div>
 
                     <div class="col-sm-6 col-lg-4 p-b-50">
-                        <h4 class="stext-301 cl0 p-b-30"> <a href="contact.html" style="color: white;">CONTACT / SUIVI</a></h4>
-                        <p class="stext-107 size-201 couleurElementFooter"> N'hésitez pas à  nous<a href="contact.html"> contacter</a> directement par mail pour toutes
+                        <h4 class="stext-301 cl0 p-b-30"> <a href="contact" style="color: white;">CONTACT / SUIVI</a></h4>
+                        <p class="stext-107 size-201 couleurElementFooter"> N'hésitez pas à  nous<a href="contact"> contacter</a> directement par mail pour toutes
                             questions. Laissez nous vos commentaires sur les articles.</p>
                         <div class="p-t-27">
                             <a href="#" class="fs-18 hov-cl1 trans-04 m-r-16">

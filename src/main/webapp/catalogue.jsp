@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="fr">
@@ -37,7 +38,7 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/monStyle.css">
 
-        <!-- Pour l'affichage pup-up des conditions générales lors du click sur "conditions générales" (créer un compte) -->
+        <!-- Pour l'affichage pup-up des conditions gÃ©nÃ©rales lors du click sur "conditions gÃ©nÃ©rales" (crÃ©er un compte) -->
         <link rel="stylesheet" href="css/scroll_ConditionsUtilisation.css">
         <script type="text/javascript" src="texte_conditions_generales_fr.txt"></script>  <!-- contenu du texte qui s'affichera dans le modal-body -->
         <!--===============================================================================================-->
@@ -59,7 +60,7 @@
                             <ul class="main-menu">
                                 <li><a href="accueil">Accueil</a></li>
                                 <li class="active-menu"><a href="catalogue">Catalogue</a></li>
-                                <li><a data-toggle="modal" href="#modalRegister">Créer son compte</a></li>
+                                <li><a data-toggle="modal" href="#modalRegister">CrÃ©er son compte</a></li>
                                 <li><a data-toggle="modal" href="#modalLogin">S'identifier</a></li>
                                 <li> <a href="contact">Contact</a> </li>
                             </ul>
@@ -71,7 +72,7 @@
                             <div class="modal-dialog " role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Créer mon compte</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">CrÃ©er mon compte</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -131,7 +132,7 @@
                                             <div class="form-group">
                                                 <input type="checkbox" id="checkboxRegister">
                                                 <label for="checkboxRegister" class="white-text form-check-label">Accepter les
-                                                    <a href="#" class="green-text font-weight-bold" data-toggle="modal"  data-target="#myModal"> Conditions générales</a>
+                                                    <a href="#" class="green-text font-weight-bold" data-toggle="modal"  data-target="#myModal"> Conditions gÃ©nÃ©rales</a>
                                                 </label>
                                             </div>
                                         </form>
@@ -139,7 +140,7 @@
 
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                        <button type="button" class="btn btn-primary">Créer compte</button>
+                                        <button type="button" class="btn btn-primary">CrÃ©er compte</button>
                                     </div>
                                 </div>
                             </div>
@@ -151,13 +152,13 @@
 
 
 
-                        <!-- Modal Conditions générales --------------------------------------------------------------------------------------------------------------------------------- -->
+                        <!-- Modal Conditions gÃ©nÃ©rales --------------------------------------------------------------------------------------------------------------------------------- -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog" id="modal-dialog_conditionsGenerales">
                                 <div class="modal-content" id="modal-content_conditionsGenerales">
 
                                     <div class="modal-header">
-                                        <h4 class="modal-title" id="myModalLabel">Conditions générales</h4>
+                                        <h4 class="modal-title" id="myModalLabel">Conditions gÃ©nÃ©rales</h4>
                                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                     </div>
 
@@ -272,7 +273,7 @@
             <!-- Header Mobile -->
             <div class="wrap-header-mobile">
                 <!-- Logo moblie -->
-                <div class="logo-mobile"><a href="index.html"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a></div>
+                <div class="logo-mobile"><a href="accueil"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a></div>
                 <!-- Icon header -->
                 <div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
                     <div class="flex-c-m h-full p-r-10">
@@ -295,7 +296,7 @@
                 <ul class="main-menu-m">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="produits.html">Catalogue</a></li>
-                    <li><a href="inscriptionMobile.html">Créer son compte</a></li>
+                    <li><a href="inscriptionMobile.html">CrÃ©er son compte</a></li>
                     <li><a href="loginMobile.html">S'identifier</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -345,7 +346,7 @@
                                 </a>
 
                                 <span class="header-cart-item-info couleurElementCart">
-                                    1 x 19.00?
+                                    1 x 19.00â‚¬
                                 </span>
                             </div>
                         </li>
@@ -361,7 +362,7 @@
                                 </a>
 
                                 <span class="header-cart-item-info couleurElementCart">
-                                    1 x 39.00?
+                                    1 x 39.00â‚¬
                                 </span>
                             </div>
                         </li>
@@ -377,7 +378,7 @@
                                 </a>
 
                                 <span class="header-cart-item-info couleurElementCart">
-                                    1 x 17.00?
+                                    1 x 17.00â‚¬
                                 </span>
                             </div>
                         </li>
@@ -385,7 +386,7 @@
 
                     <div class="w-full">
                         <div class="header-cart-total w-full p-tb-40 couleurElementCart">
-                            Total: 75.00?
+                            Total: 75.00â‚¬
                         </div>
 
                         <div class="header-cart-buttons flex-w w-full">
@@ -450,7 +451,7 @@
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-pic hov-img0">
-                                    <img src="images/product-01.jpg" alt="IMG-PRODUCT">
+                                    <img src="${art.lienImage}" alt="IMG-PRODUCT">
                                     <a href="#"
                                        class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
                                         Voir produit
@@ -462,7 +463,7 @@
                                             ${art.nom}
                                         </a>
                                         <span class="stext-105 cl3">
-                                            ${art.prixHT}
+                                            ${art.prixHT} â‚¬
                                         </span>
                                     </div>
                                 </div>
@@ -493,13 +494,13 @@
                         <ul>
                             <li class="p-b-10"> <a href="panier.html" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Suivi de commandes</a>
                             </li>
-                            <li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Retours / Réclamations</a></li>
+                            <li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Retours / RÃ©clamations</a></li>
                         </ul>
                     </div>
 
                     <div class="col-sm-6 col-lg-4 p-b-50">
                         <h4 class="stext-301 cl0 p-b-30"> <a href="contact.html" style="color: white;">CONTACT / SUIVI</a></h4>
-                        <p class="stext-107 size-201 couleurElementFooter"> N'hésitez pas à  nous<a href="contact.html"> contacter</a> directement par mail pour toutes
+                        <p class="stext-107 size-201 couleurElementFooter"> N'hÃ©sitez pas Ã Â  nous<a href="contact.html"> contacter</a> directement par mail pour toutes
                             questions. Laissez nous vos commentaires sur les articles.</p>
                         <div class="p-t-27">
                             <a href="#" class="fs-18 hov-cl1 trans-04 m-r-16">
@@ -612,10 +613,10 @@
                                 </h4>
 
                                 <span class="mtext-106 cl2">
-                                    ?58.79
+                                    58.79 â‚¬
                                 </span>
 
-                                <a href="produit-seul.html" class="alignerCommentaire mtext-105"> Détails produit</a>
+                                <a href="produit-seul.html" class="alignerCommentaire mtext-105"> DÃ©tails produit</a>
 
                                 <p class="stext-102 cl3 p-t-23">
                                     Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat
@@ -660,7 +661,7 @@
                                 <div class="p-t-33">
                                     <div class="flex-w flex-r-m p-b-10 alignerStock">
                                         <div class="size-203 flex-c-m respon6">
-                                            Disponibilité
+                                            DisponibilitÃ©
                                         </div>
                                         <div class="size-204 respon6-next">
                                             <strong>En stock</strong>
@@ -669,7 +670,7 @@
 
                                     <div class="flex-w flex-r-m p-b-10">
                                         <div class="size-204 flex-w flex-m respon6-next">
-                                            <span style="padding-right:10%;">Quantité</span>
+                                            <span style="padding-right:10%;">QuantitÃ©</span>
                                             <div class="wrap-num-product flex-w m-r-20 m-tb-10">
                                                 <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
                                                     <i class="fs-16 zmdi zmdi-minus"></i>
@@ -684,7 +685,7 @@
                                             </div>
 
                                             <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-                                                Ajouter à  la commande
+                                                Ajouter Ã Â  la commande
                                             </button>
                                         </div>
                                     </div>
@@ -752,7 +753,7 @@
                                                 $('.js-addcart-detail').each(function () {
                                                     var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
                                                     $(this).on('click', function () {
-                                                        swal(nameProduct, "est ajouté à  la commande !", "success");
+                                                        swal(nameProduct, "est ajoutÃ© Ã Â  la commande !", "success");
                                                     });
                                                 });
 

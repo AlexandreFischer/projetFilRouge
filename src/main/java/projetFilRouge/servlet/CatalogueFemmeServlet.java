@@ -20,8 +20,8 @@ import projetFilRouge.spring.AutowireServlet;
  *
  * @author alexa
  */
-@WebServlet(name = "ListeDeTousLesArticles", urlPatterns = {"/catalogue"})
-public class CatalogueServlet extends AutowireServlet {
+@WebServlet(name = "ListeDeTousLesArticlesFemme", urlPatterns = {"/catalogueFemme"})
+public class CatalogueFemmeServlet extends AutowireServlet {
 
     @Autowired
     private ArticleService service;
@@ -29,7 +29,7 @@ public class CatalogueServlet extends AutowireServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // Appel service
-        req.setAttribute("articles", service.afficherListeArticle());
+        req.setAttribute("articles", service.afficherArticleParCategorieFemme());
         
         // Renvoi vers la vue produits.jsp
         req.getRequestDispatcher("catalogue.jsp").forward(req, resp);
