@@ -244,13 +244,13 @@
                                         <td>${art.description}</td>
                                         <td>${art.prixHT}</td>
                                         <td>+ ${art.delaisAppros} jours</td>
-                                      <td>+ ${art.delaisDeLivraisonArt} jours</td>
+                                        <td>+ ${art.delaisDeLivraisonArt} jours</td>
                                         <td>+ ${art.quantiteStock}</td>
                                         <td><p data-placement="top" data-toggle="tooltip" title="Edit">
-                                                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button>
-                                      </p></td>
+                                                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit-${art.id}" ><span class="glyphicon glyphicon-pencil"></span></button>
+                                            </p></td>
                                         <td><p data-placement="top" data-toggle="tooltip" title="Delete">
-                                                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button>
+                                                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete-${art.id}" ><span class="glyphicon glyphicon-trash"></span></button>
                                             </p></td>
                                     </tr>
                                 </c:forEach>
@@ -270,51 +270,56 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                        <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <input class="form-control " type="text" placeholder="Mohsin">
+        <c:forEach items="${articles}" var="art">
+            <div class="modal fade" id="edit-${art.id}" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                            <h4 class="modal-title custom_align" id="Heading">Edition de l'article</h4>
                         </div>
-                        <div class="form-group">
-                            <input class="form-control " type="text" placeholder="Irshad">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <input class="form-control " type="text" placeholder="Mohsin">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control " type="text" placeholder="Irshad">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="textarea" rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <textarea name="textarea" rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
+                        <div class="modal-footer ">
+                            <form action="<c:url value="/modifArticleVendeur"/>" method="post">
+                                <input type="hidden" name="id" value="${art.id}">
+                                <input type="submit" class="btn btn-warning btn-lg" style="width: 100%;" value="Mise-à-jour">
+                            </form>
                         </div>
                     </div>
-                    <div class="modal-footer ">
-                        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span>Â Update</button>
-                    </div>
+                    <!-- /.modal-content -->
                 </div>
-                <!-- /.modal-content -->
+                <!-- /.modal-dialog -->
             </div>
-            <!-- /.modal-dialog -->
-        </div>
-        <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                        <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+            <div class="modal fade" id="delete-${art.id}" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                            <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>Etes-vous sûr de vouloir supprimer cet article ?</div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span>OUI</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>NON</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
-                    </div>
-                    <div class="modal-footer ">
-                        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span>Â Yes</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Â No</button>
-                    </div>
+                    <!-- /.modal-content -->
                 </div>
-                <!-- /.modal-content -->
+                <!-- /.modal-dialog -->
             </div>
-            <!-- /.modal-dialog -->
-        </div>
+        </c:forEach>
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#mytable #checkall").click(function () {
