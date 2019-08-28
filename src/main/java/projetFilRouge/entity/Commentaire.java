@@ -27,6 +27,14 @@ public class Commentaire implements Serializable {
    
     @Column(nullable = false)
     private String commentaire;
+
+    public Commentaire(Long id, String commentaire, Article articleco) {
+        this.id = id;
+        this.commentaire = commentaire;
+        this.articleco = articleco;
+    }
+    
+    
     
     @ManyToOne 
     //@JoinColumn(name = "CLEF_ETRANGERE_COMMANDE")  

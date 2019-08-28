@@ -47,6 +47,11 @@ public class CommentaireService {
         }
     }
     
+    public Iterable<Commentaire> lister(){
+        return dao.findAll();
+    }
+    
+    
     public List<Commentaire> afficherListeCommentaires(){
         System.out.println((List<Commentaire>) dao.findAll());
         return (List<Commentaire>) dao.findAll();

@@ -27,6 +27,13 @@ public class Reclamation implements Serializable {
     
     @Column(nullable = false)
     private String reclamation;
+
+    public Reclamation(Long id, String reclamation, Commande commandeReclamation) {
+        this.id = id;
+        this.reclamation = reclamation;
+        this.commandeReclamation = commandeReclamation;
+    }
+    
     
     
     @ManyToOne 
