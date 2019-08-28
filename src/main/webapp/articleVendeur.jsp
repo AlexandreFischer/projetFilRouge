@@ -310,10 +310,11 @@
                         <div class="modal-body">
                             <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>Etes-vous sûr de vouloir supprimer cet article ?</div>
                         </div>
-                        <div class="modal-footer ">
-                            <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span>OUI</button>
+                        <form action="<c:url value="/suppressionArticleVendeur"/>" method="post">
+                            <input type="hidden" name="id" value="${art.id}">
+                            <input type="submit" class="btn btn-success" value="OUI">
                             <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>NON</button>
-                        </div>
+                        </form>
                     </div>
                     <!-- /.modal-content -->
                 </div>
