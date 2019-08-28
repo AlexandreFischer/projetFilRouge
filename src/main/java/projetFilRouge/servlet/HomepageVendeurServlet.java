@@ -24,18 +24,13 @@ import projetFilRouge.spring.AutowireServlet;
 @WebServlet(name = "HomepageVendeurServlet", urlPatterns = {"/accueilVendeur"})
 public class HomepageVendeurServlet extends AutowireServlet {
     
- 
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
         // Appel services au besoin
         
         // Renvoi vers 1 vue ( JSP )
-        System.out.println(req.getSession().getAttribute("clientConnecte"));
         req.getRequestDispatcher("articleVendeur.jsp").forward(req, resp);
     }
-    
-    
 
 }

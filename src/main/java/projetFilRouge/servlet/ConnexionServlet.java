@@ -23,21 +23,22 @@ import projetFilRouge.spring.AutowireServlet;
  */
 @WebServlet(name = "ConnexionServlet", urlPatterns = {"/connexion"})
 public class ConnexionServlet extends AutowireServlet {
-    
+
     @Autowired
     private ClientService service;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       String mail = req.getParameter("email");
-       String password = req.getParameter("password");
-       
-       Client client = service.afficherClientParMailAndPassword(mail, password);
-       
-       if(client != null){
-           req.getSession().setAttribute("clientConnecte", client);
-       }
-       // commentaire pour voir
-       resp.sendRedirect("accueil");
+        String mail = req.getParameter("email");
+        String password = req.getParameter("password");
+
+        Client client = service.afficherClientParMailAndPassword(mail, password);
+
+        if (client.getMail().equals("admin@gmail.com") && client.getPassword().equals("admin")) {
+            resp.sendRedirect("accueilVendeur");
+        } else if (client != null) {
+            req.getSession().setAttribute("clientConnecte", client);
+            resp.sendRedirect("accueil");
+        }
     }
 }

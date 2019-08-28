@@ -24,9 +24,6 @@ import projetFilRouge.spring.AutowireServlet;
 @WebServlet(name = "HomepageServlet", urlPatterns = {"/accueil"})
 public class HomepageServlet extends AutowireServlet {
     
-    @Autowired
-    private ArticleService service;
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
