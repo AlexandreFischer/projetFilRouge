@@ -23,7 +23,11 @@ public class ArticleService {
 
     @Autowired
     private ArticleDAOCrud dao;
-   
+    
+    public Iterable<Article> lister(){
+        
+        return dao.findAll();
+    }
     
     //On ajoutte un article en BD 
     public void ajouterArticle(Article article) {
