@@ -59,102 +59,12 @@
 						<li class="active-menu"><a href="articleVendeur">Gérer les articles</a></li>
 						<li><a href="commentairesVendeur">Gérer les commentaires</a></li>
 						<li><a href="reclamationsVendeur">Gérer les réclamations</a></li>
-						<li> <a data-toggle="modal" href="#ajoutArticleVendeur">Ajouter article</a> </li>
+						<li> <a data-toggle="modal" href="#modalAjouterArticle">Ajouter article</a> </li>
 					</ul>
 				</div>
 
-			
-    <!-- Modal Ajout article -->
-    <h5 class="modal-title" id="ajoutArticlevendeur">Ajouter un article</h5>
-    <form role="form">
-      <div class="form-group">
-        <label for="name" class="cols-sm-2 control-label">Nom Article</label>
-        <div class="cols-sm-10">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-user fa"
-                                        aria-hidden="true"></i></span>
-            <input type="text" class="form-control" name="name" id="name"
-                                    placeholder="Nom de l'article" />
-            </div>
-          </div>
-        </div>
-      
-      <div class="form-group">
-        <label for="email2" class="cols-sm-2 control-label">Description</label>
-        <div class="cols-sm-10">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-envelope fa"
-                                        aria-hidden="true"></i></span>
-            <input type="text" class="form-control" name="email" id="email"
-                                    placeholder="Décrivez votre article" />
-            </div>
-          </div>
-        </div>
-      
-      <div class="form-group">
-        <label for="password2" class="cols-sm-2 control-label">Catégorie</label>
-        <div class="cols-sm-10">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-lock fa-lg"
-                                        aria-hidden="true"></i></span>
-            <input type="password" class="form-control" name="password"
-                                    id="password" placeholder="HOMME / FEMME / SAC" />
-            </div>
-          </div>
-        </div>
-      
-      <div class="form-group">
-        <label for="confirm3" class="cols-sm-2 control-label">Délais Appro</label>
-        <div class="cols-sm-10">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-lock fa-lg"
-                                        aria-hidden="true"></i></span>
-            <input type="password" class="form-control" name="confirm"
-                                    id="confirm" placeholder="Quel délais d'approvisionnement ?" />
-            </div>
-          </div>
-        </div>
-      <div class="form-group">
-        <label for="confirm6" class="cols-sm-2 control-label">Délais Livraison</label>
-        <div class="cols-sm-10">
-          <div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock fa-lg"
-                                        aria-hidden="true"></i></span>
-            <input type="password" class="form-control" name="confirm2"
-                                    id="confirm2" placeholder="Quel délais de livraison ?" />
-            </div>
-          </div>
-        </div>
-      <div class="form-group">
-        <label for="confirm7" class="cols-sm-2 control-label">Image source</label>
-        <div class="cols-sm-10">
-          <div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock fa-lg"
-                                        aria-hidden="true"></i></span>
-            <input type="password" class="form-control" name="confirm2"
-                                    id="confirm3" placeholder="Référence emplacement dans le dossier image..." />
-            </div>
-          </div>
-        </div>
-  </form>
-    <a href="index.html"><button type="button" class="btn btn-secondary">Fermer</button></a>
-    <button type="button" class="btn btn-primary">Ajouter article</button>
-    
-  <!--===============================================================================================-->
-  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/animsition/js/animsition.min.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/bootstrap/js/popper.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/daterangepicker/moment.min.js"></script>
-  <script src="vendor/daterangepicker/daterangepicker.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/slick/slick.min.js"></script>
-  <script src="js/slick-custom.js"></script>
-  <!--===============================================================================================-->
-  <script src="js/main.js"></script> 
-  
-
+			<!-- Modal Ajout Article -->
+                        <%@include file="modalAjouterArticle.jsp" %>
 		
 				
 
