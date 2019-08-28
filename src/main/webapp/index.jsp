@@ -74,132 +74,21 @@
                         <!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->
 
 
-                        <!-- Modal Inscription --------------------------------------------------------------------------------------------------------------------------------- -->
-                                <%@include file="modalInscription.jsp" %>
-                        <!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->
+                        <!--- Modal Inscription --->
+                        <%@include file="modalInscription.jsp" %>
+                        <!------------------------->
 
+                        <!--- Modal Conditions générales --->
+                        <%@include file="conditionsGenerales.jsp" %>
+                        <!---------------------------------->
 
-                        <!-- Modal Conditions générales --------------------------------------------------------------------------------------------------------------------------------- -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" id="modal-dialog_conditionsGenerales">
-                                <div class="modal-content" id="modal-content_conditionsGenerales">
-
-                                    <div class="modal-header">
-                                        <h4 class="modal-title" id="myModalLabel">Conditions générales</h4>
-                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    </div>
-
-                                    <div class="modal-body" id="modal-body_conditionsGenerales">
-
-                                        <div id="box-r-3">
-                                            <h1><script Language='JavaScript'>document.write(introdroite)</script></h1>
-                                            <p><script Language='JavaScript'>document.write(textedroite)</script></p>
-                                            <br>
-                                            <h4><script Language='JavaScript'>document.write(article1_titre)</script></h4>
-                                            <p><script Language='JavaScript'>document.write(article1_contenu)</script></p>
-                                            <br>	
-                                            <h4><script Language='JavaScript'>document.write(article2_titre)</script></h4>
-                                            <p> <script Language='JavaScript'>document.write(article2_contenu)</script></p>	
-                                            <br>	
-                                            <h4><script Language='JavaScript'>document.write(article3_titre)</script></h4>
-                                            <p> <script Language='JavaScript'>document.write(article3_contenu)</script></p>	
-                                            <br>	
-                                            <h4><script Language='JavaScript'>document.write(article4_titre)</script></h4>
-                                            <p> <script Language='JavaScript'>document.write(article4_contenu)</script></p>
-                                            <br>	
-                                            <h4><script Language='JavaScript'>document.write(article5_titre)</script></h4>
-                                            <p> <script Language='JavaScript'>document.write(article5_contenu)</script></p>
-                                            <br>	
-                                            <h4><script Language='JavaScript'>document.write(article7_titre)</script></h4>
-                                            <p> <script Language='JavaScript'>document.write(article7_contenu)</script></p>	
-                                            <br>	
-                                            <h4><script Language='JavaScript'>document.write(article12_titre)</script></h4>
-                                            <p> <script Language='JavaScript'>document.write(article12_contenu)</script></p>	
-                                            <br>	
-                                            <h4><script Language='JavaScript'>document.write(article13_titre)</script></h4>
-                                            <p> <script Language='JavaScript'>document.write(article13_contenu)</script></p>	
-                                            <br>	
-                                            <h4><script Language='JavaScript'>document.write(article14_titre)</script></h4>
-                                            <p> <script Language='JavaScript'>document.write(article14_contenu)</script></p>		
-
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" style="color:black; font-weight:bold; " data-dismiss="modal">Fermer</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->
-
-
-
-                        <!-- Modal Login ------------------------------------------------------------------------------------------------------------------------------------------------ -->
-                        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog"
-                             aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">S'identifier</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <form role="form" method="POST" action="connexion">
-                                            <div class="form-group">
-                                                <label for="email" class="cols-sm-2 control-label">Email</label>
-                                                <div class="cols-sm-10">
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon"><i class="fa fa-envelope fa"
-                                                                                           aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" name="email" id="email"
-                                                               placeholder="Entrer votre Email" />
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="password" class="cols-sm-2 control-label">Mot de passe</label>
-                                                <div class="cols-sm-10">
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg"
-                                                                                           aria-hidden="true"></i></span>
-                                                        <input type="password" class="form-control" name="password"
-                                                               id="password" placeholder="Entrer un mot de passe" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                            <button type="submit" class="btn btn-primary">Connexion</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->
-
-
-                        <!-- Icon header --------------------------------------------------------------------------------------------------------------------------------- -->
-                        <div class="wrap-icon-header flex-w flex-r-m h-full">
-                            <div class="flex-c-m h-full p-r-24">
-                                <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-modal-search">
-                                    <i class="zmdi zmdi-search"></i>
-                                </div>
-                            </div>
-
+                        <!--- Modal Login --->
+                        <%@include file="modalLogin.jsp" %>
+                        <!------------------->
                         
-                            <div class="flex-c-m h-full p-l-18 p-r-25 bor5">
-                                <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart"
-                                     data-notify="3">
-                                    <i class="zmdi zmdi-shopping-cart"></i>
-                                </div>
-                            </div>
-                        
-                        </div>
-                        <!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->
+                        <!--- Icon header --->
+                        <%@include file="iconeheader.jsp" %>
+                        <!------------------->
                     </nav>
                 </div>
             </div>
@@ -263,7 +152,7 @@
             </div>
         </header>
 
-                           
+
         <!-- Cart -->
         <div class="wrap-header-cart js-panel-cart">
             <div class="s-full js-hide-cart"></div>
@@ -336,7 +225,7 @@
                         </div>
 
                         <div class="header-cart-buttons flex-w w-full">
-                            <a href="panier.html"
+                            <a href="panier"
                                class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
                                 Voir commande
                             </a>
@@ -345,7 +234,7 @@
                 </div>
             </div>
         </div>
-        
+
 
 
 
@@ -442,77 +331,8 @@
         </div>
 
         <!-- Footer -->
-        <footer class="bg3 p-t-75 p-b-32">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-lg-4 p-b-50">
-                        <h4 class="stext-301 cl0 p-b-30">
-                            Categories
-                        </h4>
-
-                        <ul>
-                            <li class="p-b-10"> <a href="catalogue" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Femme</a></li>
-                            <li class="p-b-10"> <a href="catalogue" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Homme</a></li>
-                            <li class="p-b-10"> <a href="catalogue" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Sacs</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 p-b-50">
-                        <h4 class="stext-301 cl0 p-b-30">AIDE</h4>
-                        <ul>
-                            <li class="p-b-10"> <a href="panier.html" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Suivi de commandes</a>
-                            </li>
-                            <li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Retours / Réclamations</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 p-b-50">
-                        <h4 class="stext-301 cl0 p-b-30"> <a href="contact" style="color: white;">CONTACT / SUIVI</a></h4>
-                        <p class="stext-107 size-201 couleurElementFooter"> N'hésitez pas à  nous<a href="contact"> contacter</a> directement par mail pour toutes
-                            questions. Laissez nous vos commentaires sur les articles.</p>
-                        <div class="p-t-27">
-                            <a href="#" class="fs-18 hov-cl1 trans-04 m-r-16">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-
-                            <a href="#" class="fs-18 hov-cl1 trans-04 m-r-16">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-
-                            <a href="#" class="fs-18 hov-cl1 trans-04 m-r-16">
-                                <i class="fa fa-pinterest-p"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-t-40">
-                    <div class="flex-c-m flex-w p-b-18">
-                        <a href="#" class="m-all-1">
-                            <img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-                        </a>
-
-                        <a href="#" class="m-all-1">
-                            <img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-                        </a>
-
-                        <a href="#" class="m-all-1">
-                            <img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-                        </a>
-
-                        <a href="#" class="m-all-1">
-                            <img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-                        </a>
-
-                        <a href="#" class="m-all-1">
-                            <img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-                        </a>
-                    </div>
-                    <p class="stext-107 cl6 txt-center couleurElementFooter"> Site vente en ligne javazon - Projet formation iForm JAVA JEE</p>
-                </div>
-            </div>
-        </footer>
-
+        <%@include file="footer.jsp" %>
+        <!------------>
 
         <!-- Back to top -->
         <div class="btn-back-to-top" id="myBtn">
@@ -531,12 +351,12 @@
         <!--===============================================================================================-->
         <script src="vendor/select2/select2.min.js"></script>
         <script>
-                                                $(".js-select2").each(function () {
-                                                    $(this).select2({
-                                                        minimumResultsForSearch: 20,
-                                                        dropdownParent: $(this).next('.dropDownSelect2')
-                                                    });
-                                                })
+            $(".js-select2").each(function () {
+                $(this).select2({
+                    minimumResultsForSearch: 20,
+                    dropdownParent: $(this).next('.dropDownSelect2')
+                });
+            })
         </script>
         <!--===============================================================================================-->
         <script src="vendor/daterangepicker/moment.min.js"></script>
@@ -547,60 +367,60 @@
         <!--===============================================================================================-->
         <script src="vendor/parallax100/parallax100.js"></script>
         <script>
-                                                $('.parallax100').parallax100();
+            $('.parallax100').parallax100();
         </script>
         <!--===============================================================================================-->
         <script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
         <script>
-                                                $('.gallery-lb').each(function () { // the containers for all your galleries
-                                                    $(this).magnificPopup({
-                                                        delegate: 'a', // the selector for gallery item
-                                                        type: 'image',
-                                                        gallery: {
-                                                            enabled: true
-                                                        },
-                                                        mainClass: 'mfp-fade'
-                                                    });
-                                                });
+            $('.gallery-lb').each(function () { // the containers for all your galleries
+                $(this).magnificPopup({
+                    delegate: 'a', // the selector for gallery item
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    },
+                    mainClass: 'mfp-fade'
+                });
+            });
         </script>
         <!--===============================================================================================-->
         <script src="vendor/isotope/isotope.pkgd.min.js"></script>
         <!--===============================================================================================-->
         <script src="vendor/sweetalert/sweetalert.min.js"></script>
         <script>
-                                                $('.js-addwish-b2').on('click', function (e) {
-                                                    e.preventDefault();
-                                                });
+            $('.js-addwish-b2').on('click', function (e) {
+                e.preventDefault();
+            });
 
-                                                $('.js-addwish-b2').each(function () {
-                                                    var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-                                                    $(this).on('click', function () {
-                                                        swal(nameProduct, "is added to wishlist !", "success");
+            $('.js-addwish-b2').each(function () {
+                var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "is added to wishlist !", "success");
 
-                                                        $(this).addClass('js-addedwish-b2');
-                                                        $(this).off('click');
-                                                    });
-                                                });
+                    $(this).addClass('js-addedwish-b2');
+                    $(this).off('click');
+                });
+            });
 
-                                                $('.js-addwish-detail').each(function () {
-                                                    var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+            $('.js-addwish-detail').each(function () {
+                var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
 
-                                                    $(this).on('click', function () {
-                                                        swal(nameProduct, "is added to wishlist !", "success");
+                $(this).on('click', function () {
+                    swal(nameProduct, "is added to wishlist !", "success");
 
-                                                        $(this).addClass('js-addedwish-detail');
-                                                        $(this).off('click');
-                                                    });
-                                                });
+                    $(this).addClass('js-addedwish-detail');
+                    $(this).off('click');
+                });
+            });
 
-                                                /*---------------------------------------------*/
+            /*---------------------------------------------*/
 
-                                                $('.js-addcart-detail').each(function () {
-                                                    var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
-                                                    $(this).on('click', function () {
-                                                        swal(nameProduct, "is added to cart !", "success");
-                                                    });
-                                                });
+            $('.js-addcart-detail').each(function () {
+                var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "is added to cart !", "success");
+                });
+            });
         </script>
         <!--===============================================================================================-->
 
