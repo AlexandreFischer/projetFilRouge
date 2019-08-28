@@ -56,7 +56,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg"
                                         aria-hidden="true"></i></span>
-                                <select class="form-control" id="categorie">
+                                <select class="form-control" id="categorie" name="categorie">
                                     <option>HOMME</option>
                                     <option>FEMME</option>
                                     <option>SAC</option>
@@ -86,6 +86,18 @@
                         </div>
                       </div>
                     </div>
+                    
+                     <div class="form-group">
+        <label for="quantiteStock" class="cols-sm-2 control-label">Quantité stock</label>
+        <div class="cols-sm-10">
+                        <div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock fa-lg"
+                                        aria-hidden="true"></i></span>
+                          <input type="text" class="form-control" name="quantiteStock"
+                                    id="quantiteStock" placeholder="Quel quantité en stock ?" />
+                        </div>
+                      </div>
+                    </div>
+                    
       <div class="form-group">
         <label for="lienImage" class="cols-sm-2 control-label">Image source</label>
         <div class="cols-sm-10">

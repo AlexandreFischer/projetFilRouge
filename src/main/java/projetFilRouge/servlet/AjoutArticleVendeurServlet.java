@@ -48,10 +48,10 @@ public class AjoutArticleVendeurServlet extends AutowireServlet {
         Article article = new Article();
         article.setNom(nom);
         article.setDescription(description);
-        article.setPrixHT(Double.parseDouble(prixHT));
+        article.setPrixHT(Double.valueOf(prixHT));
         article.setDelaisAppros(Integer.parseInt(delaisAppros));
         article.setDelaisDeLivraisonArt(Integer.parseInt(delaisDeLivraisonArt));
-        article.setQuantiteStock(Integer.parseInt(quantiteStock));
+        article.setQuantiteStock(Integer.parseInt(quantiteStock)); 
         article.setCategorie(Categorie.valueOf(categorie));
         article.setLienImage(lienImage);
         
