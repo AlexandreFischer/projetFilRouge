@@ -231,6 +231,7 @@
                             <th>DelaisAppro</th>
                             <th>Delaislivraison</th>
                             <th>QteStock</th>
+                            <th>Editer</th>
                             <th>Delete</th>
                             </thead>
                             <tbody>
@@ -243,10 +244,11 @@
                                         <td>${art.description}</td>
                                         <td>${art.prixHT}</td>
                                         <td>+ ${art.delaisAppros} jours</td>
-                                        <td>+ ${art.delaisDeLivraisonArt} jours</td>
+                                      <td>+ ${art.delaisDeLivraisonArt} jours</td>
+                                        <td>+ ${art.quantiteStock}</td>
                                         <td><p data-placement="top" data-toggle="tooltip" title="Edit">
                                                 <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button>
-                                            </p></td>
+                                      </p></td>
                                         <td><p data-placement="top" data-toggle="tooltip" title="Delete">
                                                 <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button>
                                             </p></td>
