@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import projetFilRouge.entity.Article;
 import projetFilRouge.service.ArticleService;
 import projetFilRouge.spring.AutowireServlet;
 
@@ -22,18 +23,21 @@ import projetFilRouge.spring.AutowireServlet;
  */
 @WebServlet(name = "VoirProduitServlet", urlPatterns = {"/voirProduit"})
 public class VoirProduitServlet extends AutowireServlet {
-    
+
     @Autowired
     private ArticleService service;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         
-        req.setAttribute("voirProduit", service.afficherArticleParNom(req.getParameter("nomProduit")));
+        Long id = Long.parseLong(req.getParameter("idArticle"));
         
-        req.getRequestDispatcher("modalVoirProduit.jsp").forward(req, resp);
+        req.setAttribute("produit", service.findById(id));
+        //req.setAttribute("produit", service.afficherArticleParNom(req.getParameter("nomProduit")));
+                
+        
+        req.getRequestDispatcher("produit-seul.jsp").forward(req, resp);
     }
-
-
 
 }

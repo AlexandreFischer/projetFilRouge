@@ -213,7 +213,8 @@
         </div>
 
 
-        <!-- Product --> <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- Product -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
         <div class="container">
             <div class="row">
@@ -362,13 +363,13 @@
                         <ul>
                             <li class="p-b-10"> <a href="panier.html" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Suivi de commandes</a>
                             </li>
-                            <li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Retours / RÃ©clamations</a></li>
+                            <li class="p-b-10"> <a href="#" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Retours / Réclamations</a></li>
                         </ul>
                     </div>
 
                     <div class="col-sm-6 col-lg-4 p-b-50">
                         <h4 class="stext-301 cl0 p-b-30"> <a href="contact.html" style="color: white;">CONTACT / SUIVI</a></h4>
-                        <p class="stext-107 size-201 couleurElementFooter"> N'hÃ©sitez pas Ã  nous<a href="contact.html"> contacter</a> directement par mail pour toutes
+                        <p class="stext-107 size-201 couleurElementFooter"> N'hésitez pas à  nous<a href="contact.html"> contacter</a> directement par mail pour toutes
                             questions. Laissez nous vos commentaires sur les articles.</p>
                         <div class="p-t-27">
                             <a href="#" class="fs-18 hov-cl1 trans-04 m-r-16">

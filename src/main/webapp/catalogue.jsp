@@ -264,8 +264,8 @@
                             <div class="block2">
                                 <div class="block2-pic hov-img0">
                                     <img src="<c:url value="${art.lienImage}"></c:url>" alt="IMG-PRODUCT">
-                                    <a href="voirProduit?nomProduit=${art.nom}"
-                                           class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                    <a href="voirProduit?idArticle=${art.id}"
+                                           class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
                                             Voir produit
                                         </a>
                                     </div>
@@ -299,9 +299,6 @@
         </div>
         <!------------------->
 
-        <!--- Moda1 voirProduit --->
-        <%@include file="modalVoirProduit.jsp" %>
-        <!------------------------->
 
         <!--===============================================================================================-->
         <script src="vendor/jquery/jquery-3.2.1.min.js"></script>

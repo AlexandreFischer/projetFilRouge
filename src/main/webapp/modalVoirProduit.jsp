@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="wrap-modal1 js-modal1 p-t-60 p-b-20" id="modalVoirProduit">
     <div class="overlay-modal1 js-hide-modal1"></div>
 
@@ -16,34 +17,11 @@
                             <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 
                             <div class="slick3 gallery-lb">
-                                <div class="item-slick3" data-thumb="images/product-detail-01.jpg">
+                                <div class="item-slick3" data-thumb="images/product-detail-01.jpg"> <!-- images/product-detail-01.jpg -->
                                     <div class="wrap-pic-w pos-relative">
                                         <img src="images/product-detail-01.jpg" alt="IMG-PRODUCT">
 
-                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                           href="images/product-detail-01.jpg">
-                                            <i class="fa fa-expand"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick3" data-thumb="images/product-detail-02.jpg">
-                                    <div class="wrap-pic-w pos-relative">
-                                        <img src="images/product-detail-02.jpg" alt="IMG-PRODUCT">
-
-                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                           href="images/product-detail-02.jpg">
-                                            <i class="fa fa-expand"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick3" data-thumb="images/product-detail-03.jpg">
-                                    <div class="wrap-pic-w pos-relative">
-                                        <img src="images/product-detail-03.jpg" alt="IMG-PRODUCT">
-
-                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                           href="images/product-detail-03.jpg">
+                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-01.jpg"><!--images/product-detail-01.jpg"-->
                                             <i class="fa fa-expand"></i>
                                         </a>
                                     </div>
@@ -56,20 +34,19 @@
                 <div class="col-md-6 col-lg-5 p-b-30">
                     <div class="p-r-50 p-t-5 p-lr-0-lg">
                         <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-                            ${voirProduit.nom}
+                            ${produit.nom}
                         </h4>
 
                         <span class="mtext-106 cl2">
-                            ${voirProduit.prixHT} €
+                            ${produit.prixHT} €
                         </span>
 
                         <a href="produit-seul.jsp" class="alignerCommentaire mtext-105"> Détails produit</a>
 
                         <p class="stext-102 cl3 p-t-23">
-                            ${voirProduit.description}
+                            ${produit.description}
                         </p>
 
-                        <!--  -->
                         <div class="p-t-33">
                             <div class="flex-w flex-r-m p-b-10 alignerStock">
                                 <div class="size-203 flex-c-m respon6">
@@ -88,8 +65,7 @@
                                             <i class="fs-16 zmdi zmdi-minus"></i>
                                         </div>
 
-                                        <input class="mtext-104 cl3 txt-center num-product" type="number"
-                                               name="num-product" value="1">
+                                        <input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
 
                                         <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
                                             <i class="fs-16 zmdi zmdi-plus"></i>

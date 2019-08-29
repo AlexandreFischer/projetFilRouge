@@ -29,6 +29,11 @@ public class ArticleService {
         return dao.findAll();
     }
     
+    public Article findById(Long id){
+        
+        return dao.findById(id);
+    }
+    
     //On ajoutte un article en BD 
     public void ajouterArticle(Article article) {
        if(article != null) {
