@@ -87,7 +87,7 @@
                         <label for="lienImage" class="cols-sm-2 control-label">Image source</label>
                         <div class="cols-sm-10">
                             <div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="lienImage" id="lienImage" placeholder="Référence emplacement dans le dossier image..." />
+                                <input type="file" class="form-control-file" name="lienImage" id="lienImage"/>
                             </div>
                         </div>
                     </div>

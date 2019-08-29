@@ -53,14 +53,10 @@ public class AjoutArticleVendeurServlet extends AutowireServlet {
         article.setDelaisDeLivraisonArt(Integer.parseInt(delaisDeLivraisonArt));
         article.setQuantiteStock(Integer.parseInt(quantiteStock)); 
         article.setCategorie(Categorie.valueOf(categorie));
-        article.setLienImage(lienImage);
-        
-    
+        article.setLienImage("images/JPEG/"+lienImage);
         
         serviceArt.ajouterArticle(article);
-        
-        
-        
+
         // Renvoi vers 1 vue ( JSP )   
         resp.sendRedirect("accueilVendeur");
     }
