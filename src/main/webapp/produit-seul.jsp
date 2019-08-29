@@ -49,7 +49,7 @@
                 <div class="wrap-menu-desktop">
                     <nav class="limiter-menu-desktop p-l-45">
                         <!-- Logo desktop -->
-                        <a href="index.html" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
+                        <a href="accueil" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
                         <!-- Menu desktop -->
                         <div class="menu-desktop">
                             <ul class="main-menu">
@@ -60,11 +60,11 @@
                                 <li><a href="contact">Contact</a></li>
                             </ul>
                         </div>
-                        
+
                         <!--- Modal Inscription --->
                         <%@include file="modalInscription.jsp" %>
                         <!------------------------->
-                        
+
                         <!--- Modal Conditions générales --->
                         <%@include file="conditionsGenerales.jsp" %>
                         <!---------------------------------->
@@ -72,7 +72,7 @@
                         <!--- Modal Login --->
                         <%@include file="modalLogin.jsp" %>
                         <!------------------->
-                        
+
                         <!--- Icon header --->
                         <%@include file="iconeheader.jsp" %>
                         <!------------------->
@@ -212,7 +212,7 @@
                     <div class="col-md-6 col-lg-7 p-b-30">
                         <div class="p-l-25 p-r-30 p-lr-0-lg">
                             <div class="wrap-slick3 flex-sb flex-w">
-                                <div class="wrap-slick3-dots"></div>
+                                
                                 <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 
                                 <div class="slick3 gallery-lb">

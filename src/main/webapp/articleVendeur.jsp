@@ -52,7 +52,7 @@
             <div class="wrap-menu-desktop">
                 <nav class="limiter-menu-desktop p-l-45">
                     <!-- Logo desktop -->
-                    <a href="index.html" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
+                    <a href="accueil" class="logo"><img src="images/logo_javazon.png" alt="IMG-LOGO"></a>
                     <!-- Menu desktop -->
                     <div class="menu-desktopVendeur">
                         <ul class="main-menu">
