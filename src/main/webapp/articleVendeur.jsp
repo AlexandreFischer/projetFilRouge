@@ -57,7 +57,7 @@
                     <div class="menu-desktopVendeur">
                         <ul class="main-menu">
                             <li><a href="accueil">Accueil</a></li>
-                            <li class="active-menu"><a href="articleVendeur">Gérer les articles</a></li>
+                            <li class="active-menu"><a href="accueilVendeur">Gérer les articles</a></li>
                             <li><a href="commentairesVendeur">Gérer les commentaires</a></li>
                             <li><a href="reclamationsVendeur">Gérer les réclamations</a></li>
                             <li> <a data-toggle="modal" href="#modalAjouterArticle">Ajouter article</a> </li>

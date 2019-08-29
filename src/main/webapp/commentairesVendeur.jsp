@@ -57,12 +57,15 @@
                     <div class="menu-desktopVendeur">
                         <ul class="main-menu">
                             <li><a href="accueil">Accueil</a></li>
-                            <li><a href="articleVendeur">Gérer les articles</a></li>
+                            <li><a href="accueilVendeur">Gérer les articles</a></li>
                             <li class="active-menu"><a href="commentairesVendeur">Gérer les commentaires</a></li>
                             <li><a href="reclamationsVendeur">Gérer les réclamations</a></li>
-                            <li><a data-toggle="modal" href="#ajoutArticleVendeur">Ajouter article</a></li>
+                            <li><a data-toggle="modal" href="#modalAjouterArticle">Ajouter article</a></li>
                         </ul>
                     </div>
+                    
+                      <!-- Modal Ajout Article -->
+                    <%@include file="modalAjouterArticle.jsp" %>
 
                     <!-- Modal Inscription -->
                     <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog"
@@ -357,7 +360,7 @@
                                 <tr>
                                     <td><input type="checkbox" class="checkthis" /></td>
                                     <td>${com.id}</td>                                  
-                                    <td>${com.articleco}</td>
+                                    <td>${com.articleco.nom}</td>
                                     <td>${com.commentaire}</td>
 
                                     <td><p data-placement="top" data-toggle="tooltip" title="Edit">
