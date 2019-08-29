@@ -27,7 +27,6 @@ public class HomepageServlet extends AutowireServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
-        // Appel services au besoin
         
         // Renvoi vers 1 vue ( JSP )
         System.out.println(req.getSession().getAttribute("clientConnecte"));
