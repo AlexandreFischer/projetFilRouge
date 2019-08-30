@@ -41,7 +41,6 @@ public class CommandeService {
     @Autowired
     private CommandeDAOCrud daoCommande;
 
-//    // CETTE FONCTION ME CASSE LES C********* VOILA
 //    public void ajouterPanier(long idClient, long idArticle, long quantite) { // Créé la ligne avec l'idArticle associé mais pas l'idCommande
 //
 //        // Recupere la commande EN COURS du client idClient si elle existe, sinon on en cree une nouvelle
