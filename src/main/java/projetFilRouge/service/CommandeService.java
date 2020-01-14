@@ -58,18 +58,17 @@ public class CommandeService {
 //            commande.setClient(cli);
 //
 //        } else {
-//            System.out.println("6-COMMANDE DEJA EXISTANTE DU COUP ON PASSE A LA SUITE");
+//            System.out.println("6-COMMANDE DEJA EXISTANTE");
 //        }
 //
-//        // Cree nouv ligne de commande que j associe a la commande
+//        // Cree nouvelle ligne de commande que j'associe à la commande
 //        LigneDeCommande ligneCmd = new LigneDeCommande();
 //        System.out.println("7-NOUVELLE LIGNE DE COMMANDE CREE : " + ligneCmd);
 //        //ligneCmd.setCommande(commande);
 //
-//        // Recup article a partir de son id et l assoc ligne com + quantite
+//        // Recup article à partir de son id et l'associe ligne com + quantite
 //        Article art = daoArticle.findOne(idArticle);
 //        System.out.println("8-RECUPERATION DE L'ARTICLE PAR SON ID : " + art);
-//        // CETTE LIGNE PLANTE TOUT //art.getListeLigneDeCommandes().add(ligneCmd);
 //        ligneCmd.setArticle(art);
 //        System.out.println("9-SET L'ARTICLE A LA LIGNE DE COMMANDE : " + ligneCmd);
 //        ligneCmd.setQuantiteArticle(quantite);
@@ -91,7 +90,7 @@ public class CommandeService {
 //        if(commande == null){
 //            commande = new Commande();
 //            System.out.println("2-NOUVELLE COMMANDE CREE : " + commande);
-//            // Recup client et l associe a la commandes
+//            // Recup client et l'associe à la commande
 //            Client cli = daoClient.findOne(idClient);
 //            System.out.println("3-CLIENT RECUPERE : " + cli);
 //            System.out.println("4-AJOUT COMMANDE A LA LISTE DE COMMANDE DU CLIENT : ");
@@ -101,10 +100,10 @@ public class CommandeService {
 //            System.out.println("5.5- VERIFICATION ASSOCIATION : " + commande);  
 //        }
 //        else {
-//            System.out.println("6-COMMANDE DEJA EXISTANTE DU COUP ON PASSE A LA SUITE");
+//            System.out.println("6-COMMANDE DEJA EXISTANTE");
 //        }
 
-//        // Cree nouv ligne de commande que j associe a la commande
+//        // Cree nouvelle ligne de commande que j'associe à la commande
 //        LigneDeCommande ligneCmd = new LigneDeCommande();
 //        System.out.println("7-NOUVELLE LIGNE DE COMMANDE CREE : " + ligneCmd);
 //        ligneCmd.setCommande(commande);
@@ -119,7 +118,7 @@ public class CommandeService {
 //        ligneCmd.setQuantiteArticle(quantite);
 //        System.out.println("10-SET LA QUANTITE A LA LIGNE DE COMMANDE : " + ligneCmd);
 //        
-//        // Maj / ajoute de la commande et on est ok
+//        // Maj de la commande
 //        daoCommande.save(commande);
 //        System.out.println("11-AJOUT DE LA COMMANDE EN BASE DE DONNEES");
 //    }
